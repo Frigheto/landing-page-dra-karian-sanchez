@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#d4a574">
   <title>Dra. Karina C. Sanchez - Ortodontia e Estética</title>
   <meta name="description" content="Transformando sorrisos e promovendo autoestima. Especialista em Ortodontia, Clínica Geral, Botox e Invisalign em Santa Maria/RS.">
+  
+  <!-- Preconnect para melhorar performance -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  
+  <!-- Preload imagem hero para mobile -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&auto=format&fit=crop&q=80" media="(max-width: 768px)">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <style>
     * {
@@ -878,6 +887,13 @@
       transform: scale(1.1);
     }
 
+    /* Melhora performance com will-change em elementos animados */
+    .swiper-slide,
+    .servico-card,
+    .contato-card {
+      will-change: transform;
+    }
+
     /* Responsive */
     @media (max-width: 968px) {
       nav {
@@ -925,7 +941,7 @@
         gap: 8px;
       }
       
-      /* Oculta vídeo no mobile para economizar dados e evitar sobrecarga em dispositivos móveis */
+      /* Oculta vídeo no mobile para economizar dados e melhorar performance */
       .hero-media { 
         display: none; 
       }
@@ -935,7 +951,9 @@
       }
       
       .hero-video { 
-        background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
+        background: 
+          linear-gradient(135deg, rgba(44, 44, 44, 0.85) 0%, rgba(139, 111, 71, 0.85) 100%),
+          url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&auto=format&fit=crop&q=80') center/cover no-repeat;
         min-height: 90vh;
         height: auto;
       }
@@ -1371,13 +1389,13 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop" alt="Clareamento no consultório">
+              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop&q=75" alt="Clareamento no consultório" loading="lazy">
               <h3>Clareamento Dental - No Consultório</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop" alt="Clareamento caseiro">
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop&q=75" alt="Clareamento caseiro" loading="lazy">
               <h3>Clareamento Dental Caseiro</h3>
             </div>
           </div>
@@ -1389,25 +1407,25 @@
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop" alt="Botox">
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=75" alt="Botox" loading="lazy">
               <h3>Botox e Harmonização</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop" alt="Clínica Geral">
+              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop&q=75" alt="Clínica Geral" loading="lazy">
               <h3>Clínica Geral</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&auto=format&fit=crop" alt="Limpeza">
+              <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&auto=format&fit=crop&q=75" alt="Limpeza" loading="lazy">
               <h3>Limpeza e Prevenção</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop" alt="Ortodontia">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=75" alt="Ortodontia" loading="lazy">
               <h3>Ortodontia</h3>
             </div>
           </div>
@@ -1504,9 +1522,9 @@
     💬
   </a>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+  <!-- Swiper JS - defer para não bloquear o carregamento -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script defer>
     // Toggle Mobile Menu
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
