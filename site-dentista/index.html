@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Karina C. Sanchez - Ortodontia e Estética</title>
+  <meta name="description" content="Transformando sorrisos e promovendo autoestima. Especialista em Ortodontia, Clínica Geral, Botox e Invisalign em Santa Maria/RS.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-color: #d4a574;
+      --secondary-color: #8b6f47;
+      --dark-color: #2c2c2c;
+      --light-color: #f8f8f8;
+      --white: #ffffff;
+      --text-dark: #333333;
+      --text-light: #666666;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    /* Esconder a barra superior (contatos) em desktop; manter em mobile */
+    .header-top {
+      display: none;
+      background: var(--primary-color);
+      padding: 12px 0;
+      text-align: center;
+      color: var(--white);
+      font-size: 0.85rem;
+    }
+
+    .header-top a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.3s;
+    }
+
+    .header-top a:hover {
+      opacity: 0.85;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+      gap: 3rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      white-space: nowrap;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+      white-space: nowrap;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .cta-button {
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(212, 165, 116, 0.25);
+    }
+
+    .cta-button:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(212, 165, 116, 0.35);
+    }
+
+    /* Contact links next to CTA - minimal and interactive */
+    .contact-links {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      margin-right: 0.6rem;
+    }
+
+    .contact-link {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: transparent;
+      border: 1px solid rgba(44,44,44,0.06);
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: all 0.22s ease;
+      font-size: 1.05rem;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      background: var(--primary-color);
+      color: var(--white);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(133, 100, 69, 0.12);
+      outline: none;
+    }
+
+    .contact-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      display: block;
+    }
+
+    /* Hide contact-links on small screens (use top bar there) */
+    @media (max-width: 768px) {
+      .contact-links {
+        display: none;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .mobile-menu span {
+      width: 25px;
+      height: 3px;
+      background: var(--primary-color);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero Section com Vídeo de Fundo */
+    .hero-video {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Media wrapper for video background */
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: -2; /* behind overlay */
+      background: #000; /* fallback color */
+    }
+
+    .hero-media video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 125%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -58%);
+      object-fit: cover;
+      will-change: transform;
+    }
+
+    .hero-video-toggle {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 2;
+      background: rgba(255,255,255,0.95);
+      border: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform .15s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .hero-video-toggle:hover { transform: scale(1.04); }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      width: 100%;
+      padding: 0 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-text {
+      color: var(--white);
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-text .highlight {
+      color: var(--primary-color);
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    /* Formulário Hero */
+    .hero-form-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+
+    .hero-form-card h3 {
+      color: var(--dark-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+      line-height: 1.6;
+    }
+
+    .submit-button {
+      width: 100%;
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .submit-button:hover {
+      background: var(--secondary-color);
+    }
+
+    /* Seção Quem Somos */
+    .quem-somos {
+      padding: 100px 5%;
+      background: var(--white);
+    }
+
+    .quem-somos-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .quem-somos h2 {
+      font-size: 2.5rem;
+      color: var(--dark-color);
+      margin-bottom: 2rem;
+    }
+
+    .quem-somos-text {
+      background: var(--light-color);
+      padding: 2rem;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .quem-somos-text h4 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .quem-somos-text p {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    /* Carrossel de Imagens */
+    .image-carousel {
+      position: relative;
+      min-height: 360px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    /* Carrossel - Fotos da Dra. Karina (imagens verticais) */
+    .dra-karina .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    .dra-karina .swiper-slide img {
+      width: 100%;
+      height: auto;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      transition: transform .35s ease;
+    }
+
+    .dra-karina .swiper-slide img:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 1024px) {
+      .image-carousel {
+        min-height: 360px;
+      }
+
+      .swiper {
+        min-height: 360px;
+      }
+
+      .dra-karina .swiper-slide img {
+        max-height: 320px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .image-carousel {
+        min-height: 300px;
+      }
+
+      .swiper {
+        min-height: 300px;
+      }
+
+      .dra-karina .swiper-slide img {
+        max-height: 280px;
+      }
+    }
+    .swiper-button-prev {
+      color: var(--primary-color);
+    }
+
+    /* Seção Produtos/Serviços */
+    .produtos-servicos {
+      padding: 100px 5%;
+      background: var(--light-color);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--dark-color);
+      margin-bottom: 3rem;
+    }
+
+    .servicos-carousel {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .servico-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+      height: 100%;
+    }
+
+    .servico-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .servico-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .servico-card h3 {
+      padding: 1.5rem;
+      color: var(--dark-color);
+      font-size: 1.2rem;
+    }
+
+    /* Seção FAQ e Depoimentos */
+    .faq-depoimentos {
+      padding: 100px 5%;
+      background: var(--dark-color);
+      color: var(--white);
+    }
+
+    .faq-depoimentos-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title-white {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--white);
+      margin-bottom: 3rem;
+    }
+
+    /* Vídeos FAQ */
+    .video-carousel {
+      margin-bottom: 4rem;
+    }
+
+        /* Depoimentos - Carousel de Feedbacks (sem imagens) */
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 14px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            color: var(--text-dark);
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            max-height: 6.6rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .testimonial-response {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin-top: 0.6rem;
+            background: rgba(212,165,116,0.06);
+            padding: 0.6rem 0.9rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .read-more {
+            background: transparent;
+            border: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0;
+            margin-bottom: 0.6rem;
+        }
+
+        .read-more:focus { outline: 2px solid rgba(212,165,116,0.18); border-radius: 6px; }
+
+        .testimonial-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .testimonial-author {
+            color: #ddd;
+            text-align: center;
+        }
+
+        .testimonial-author strong {
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .testimonial-author small {
+            color: #ccc;
+            display: block;
+        }
+      overflow: hidden;
+    }
+
+    .video-item video {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .video-item h3 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.7);
+      padding: 1rem;
+      border-radius: 10px;
+      font-size: 1.3rem;
+    }
+
+    /* Accordion de Depoimentos */
+    .depoimentos-accordion {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .depoimento-item {
+      background: rgba(255,255,255,0.1);
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .depoimento-header {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .depoimento-header:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .depoimento-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1.5rem;
+    }
+
+    .depoimento-item.active .depoimento-content {
+      max-height: 1000px;
+      padding: 1.5rem;
+    }
+
+    .depoimento-content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .stars {
+      color: var(--primary-color);
+      font-size: 1.2rem;
+    }
+
+    /* Seção Contato */
+    .contato {
+      padding: 100px 5%;
+      background: var(--light-color);
+    }
+
+    .contato-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .contato-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .contato-card:hover {
+      background: var(--primary-color);
+      color: var(--white);
+      transform: translateY(-5px);
+    }
+
+    .contato-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+      color: var(--white);
+      transition: all 0.3s;
+    }
+
+    .contato-card:hover .contato-icon {
+      background: var(--white);
+      color: var(--primary-color);
+    }
+
+    .contato-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .contato-card a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-color);
+      color: var(--white);
+      padding: 3rem 5%;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section a:hover {
+      color: var(--primary-color);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #999;
+    }
+
+    .footer-map {
+      margin-top: 1rem;
+    }
+
+    .footer-map iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      z-index: 999;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      nav {
+        gap: 1.5rem;
+      }
+
+      .nav-links {
+        gap: 1.5rem;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+      }
+
+      .cta-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-top {
+        font-size: 0.7rem;
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      /* Oculta vídeo no mobile para economizar dados e evitar sobrecarga em dispositivos móveis */
+      .hero-media { display: none; }
+      .hero-video-toggle { display: none; }
+      .hero-video { background: url('assets/images/hero-poster.jpg') center/cover no-repeat; background-size: cover; }
+
+      .header-top a {
+        margin: 0 8px;
+        font-size: 0.7rem;
+      }
+
+      nav {
+        padding: 1rem 5%;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 110px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 110px);
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem;
+        transition: left 0.3s;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        justify-content: flex-start;
+        gap: 0;
+      }
+
+      .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .cta-button {
+        display: none;
+      }
+
+      .nav-links.active::after {
+        content: '';
+        display: block;
+        margin-top: 2rem;
+      }
+
+      .nav-links.active::before {
+        content: 'Agendar Consulta';
+        display: block;
+        width: calc(100% - 4rem);
+        margin: 2rem auto;
+        padding: 15px;
+        background: var(--primary-color);
+        color: var(--white);
+        text-align: center;
+        border-radius: 30px;
+        font-weight: 600;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        right: 2rem;
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .hero-content,
+      .quem-somos-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .swiper-slide img,
+      .video-item video {
+        height: 400px;
+      }
+
+      .contato-grid,
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Dra. Karina C. Sanchez",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Venâncio Aires, 2050 - Sala 403",
+        "addressLocality": "Santa Maria",
+        "addressRegion": "RS",
+        "postalCode": "97010-004",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5555996147772",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Maria Silva" },
+          "datePublished": "2025-01-15",
+          "reviewBody": "Nunca imaginei que sorrir pudesse me transformar tanto. O tratamento com a Dra. Karina foi eficiente, o atendimento muito humano e o resultado superou minhas expectativas.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "João Santos" },
+          "datePublished": "2024-11-10",
+          "reviewBody": "O Invisalign mudou minha rotina sem afetar minha aparência — discreto e muito eficaz. A equipe foi atenciosa desde a primeira consulta até o resultado final.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Ana Paula" },
+          "datePublished": "2024-10-05",
+          "reviewBody": "Fiz clareamento e o resultado ficou natural e duradouro. Ambiente acolhedor, equipe competente e explicações claras sobre o processo.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Carlos Eduardo" },
+          "datePublished": "2024-09-12",
+          "reviewBody": "Procurei harmonização por recomendação e o resultado ficou natural, com muito cuidado e profissionalismo. Senti-me seguro durante todo o processo.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Fernanda Costa" },
+          "datePublished": "2024-08-20",
+          "reviewBody": "Coloquei lentes de contato dental e recuperei minha autoestima. Atendimento personalizado e atenção a cada detalhe — resultado impecável.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header-top">
+    <a href="mailto:drkarina@example.com">📧 drkarina@example.com</a>
+    <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank">📱 (55) 99614-7772</a>
+    <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">📸 @karinacastrosanchez</a>
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo">Dra. Karina C. Sanchez</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#quem-somos">Quem Somos</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="contact-links" aria-hidden="false">
+        <a class="contact-link" href="mailto:drkarina@example.com" title="Enviar e-mail" aria-label="Enviar e-mail">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a class="contact-link" href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.65.74 3.85a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/karinacastrosanchez/" target="_blank" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1112 17a4.5 4.5 0 010-9zm5.5-3a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+        </a>
+      </div>
+
+      <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="cta-button">Agendar Consulta</a>
+      <div class="mobile-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section com Vídeo -->
+  <section id="inicio" class="hero-video">
+    <!-- Hero video: substitua a `source` abaixo pelo seu vídeo (mp4/webm). Use `poster` para imagem de fallback.
+         Exemplos: local `assets/videos/meu-video.mp4` ou URL externa. -->
+    <div class="hero-media" aria-hidden="true">
+      <video id="heroVideo" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+        <source src="assets/videos/hero-video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+      <!-- Toggle botão para pausar/reproduzir o vídeo -->
+      <button class="hero-video-toggle" aria-controls="heroVideo" aria-label="Pausar vídeo" title="Pausar vídeo">⏸</button>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Transformando <span class="highlight">Sorrisos</span> e Promovendo <span class="highlight">Autoestima</span></h1>
+        <p><strong>Especialista em Ortodontia e Clínica Geral com Botox e Invisalign.</strong></p>
+        <p>Recupere seu sorriso com segurança, conforto e rapidez na clínica Dra. Karina C. Sanchez.</p>
+        <p>Somos especialistas em ortodontia em Santa Maria (RS), com soluções avançadas como Invisalign e harmonização facial.</p>
+      </div>
+      <div class="hero-form-card" id="agendar">
+        <h3>Agende a sua consulta hoje mesmo!</h3>
+        <form id="agendamentoForm">
+          <div class="form-group">
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Maria da Silva" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone/WhatsApp *</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(55) 99999-9999" required>
+          </div>
+          <div class="form-group">
+            <label for="caso">Descreva seu caso</label>
+            <textarea id="caso" name="caso" rows="4" placeholder="Ex: Gostaria de fazer clareamento dental, tenho interesse em Invisalign, preciso de uma avaliação ortodôntica..." style="resize: vertical; min-height: 100px;"></textarea>
+          </div>
+          <button type="submit" class="submit-button" id="submitBtn">
+            Agendar consulta
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Quem Somos -->
+  <section id="quem-somos" class="quem-somos">
+    <div class="quem-somos-content">
+      <div class="image-carousel dra-karina">
+        <div class="swiper draKarinaSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slides serão preenchidos dinamicamente com as imagens em assets/images/dra-karina -->
+          </div>
+          <div class="dra-pagination swiper-pagination"></div>
+          <div class="dra-button-next swiper-button-next"></div>
+          <div class="dra-button-prev swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="quem-somos-text">
+        <h2>Clínica de Ortodontia e Estética</h2>
+        <h4>Clínica moderna e especializada em reabilitação oral</h4>
+        <p><strong>Liderada pela Dra. Karina C. Sanchez, somos uma clínica especializada em ortodontia em Santa Maria (RS) com foco em transformação de sorrisos.</strong></p>
+        <p>Combinamos alta tecnologia, como escaneamento intraoral e Invisalign, com uma abordagem humanizada, para devolver o seu sorriso com conforto e segurança.</p>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="cta-button">Quero agendar minha consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Produtos/Serviços -->
+  <section id="servicos" class="produtos-servicos">
+    <h2 class="section-title">Tratamentos e Serviços</h2>
+    <div class="servicos-carousel">
+      <div class="swiper servicosSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="servico-card">
+              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop" alt="Clareamento no consultório">
+              <h3>Clareamento Dental - No Consultório</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="servico-card">
+              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop" alt="Clareamento caseiro">
+              <h3>Clareamento Dental Caseiro</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="servico-card">
+              <img src="images/dra-karina/invisalign.jpg" alt="Invisalign">
+              <h3>Invisalign</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="servico-card">
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop" alt="Botox">
+              <h3>Botox e Harmonização</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="servico-card">
+              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop" alt="Clínica Geral">
+              <h3>Clínica Geral</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="servico-card">
+              <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&auto=format&fit=crop" alt="Limpeza">
+              <h3>Limpeza e Prevenção</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="servico-card">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop" alt="Ortodontia">
+              <h3>Ortodontia</h3>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção FAQ e Depoimentos -->
+  <section id="faq" class="faq-depoimentos">
+    <div class="faq-depoimentos-grid">
+      <h2 class="section-title-white">Perguntas Frequentes & Depoimentos</h2>
+
+            <!-- Carrossel de Depoimentos (Texto) -->
+            <div class="testimonials-carousel">
+                <div class="swiper testimonialsSwiper">
+                    <div class="swiper-wrapper">
+
+
+
+
+                        <!-- Slides serão carregados dinamicamente de data/testimonials.json -->
+                    </div>
+
+                    <div class="testimonials-pagination swiper-pagination"></div>
+                    <div class="testimonials-button-next swiper-button-next"></div>
+                    <div class="testimonials-button-prev swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="contato">
+    <h2 class="section-title">Agende sua consulta hoje mesmo</h2>
+    <div class="contato-grid">
+      <div class="contato-card">
+        <div class="contato-icon">📱</div>
+        <h3>WhatsApp</h3>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank">(55) 99614-7772</a>
+      </div>
+      <div class="contato-card">
+        <div class="contato-icon">📧</div>
+        <h3>E-mail</h3>
+        <a href="mailto:karina_c_sanchez@hotmail.com">karina_c_sanchez@hotmail.com</a>
+      </div>
+      <div class="contato-card">
+        <div class="contato-icon">📞</div>
+        <h3>Telefone</h3>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank">(55) 99614-7772</a>
+      </div>
+      <div class="contato-card">
+        <div class="contato-icon">📸</div>
+        <h3>Instagram</h3>
+        <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">@karinacastrosanchez</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Dra. Karina C. Sanchez</h3>
+        <p>Transformando sorrisos e promovendo autoestima</p>
+        <p>Especialista em Ortodontia e Clínica Geral</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contatos</h3>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank">📞 (55) 99614-7772</a>
+        <a href="mailto:karina_c_sanchez@hotmail.com">📧 karina_c_sanchez@hotmail.com</a>
+        <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">📸 @karinacastrosanchez</a>
+      </div>
+      <div class="footer-section">
+        <h3>Localização</h3>
+        <p>R. Venâncio Aires, 2050 - Sala 403</p>
+        <p>Centro - Santa Maria/RS</p>
+        <p>CEP: 97010-004</p>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.173835825476!2d-53.81569472446253!3d-29.686338975091434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cbf9f1f1f1f1%3A0x1234567890abcdef!2sR.%20Ven%C3%A2ncio%20Aires%2C%202050%20-%20Sala%20403%20-%20Centro%2C%20Santa%20Maria%20-%20RS%2C%2097010-004!5e0!3m2!1spt-BR!2sbr!4v1234567890123" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Dra. Karina C. Sanchez - Todos os direitos reservados</p>
+      <p>Desenvolvido por Kronos Assessoria</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank">
+    💬
+  </a>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Toggle Mobile Menu
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    // Toggle Depoimentos
+    function toggleDepoimento(element) {
+      const item = element.parentElement;
+      const allItems = document.querySelectorAll('.depoimento-item');
+            
+      allItems.forEach(i => {
+        if (i !== item) {
+          i.classList.remove('active');
+        }
+      });
+            
+      item.classList.toggle('active');
+    }
+
+    // Função de envio do formulário para WhatsApp
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('agendamentoForm');
+      const telefoneInput = document.getElementById('telefone');
+            
+      // Máscara de telefone automática
+      if (telefoneInput) {
+        telefoneInput.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\D/g, '');
+                    
+          if (value.length <= 11) {
+            value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+            value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+          }
+                    
+          e.target.value = value;
+        });
+      }
+            
+      // Envio do formulário
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+                    
+          // Pegar valores dos campos
+          const nome = document.getElementById('nome').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const telefone = document.getElementById('telefone').value.trim();
+          const caso = document.getElementById('caso').value.trim();
+                    
+          // Validações
+          if (!nome || !email || !telefone) {
+            alert('⚠️ Por favor, preencha todos os campos obrigatórios (*)');
+            return;
+          }
+                    
+          // Validação de email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert('⚠️ Por favor, insira um e-mail válido!');
+            return;
+          }
+                    
+          // Construir mensagem para WhatsApp
+          let mensagem = '🦷 *AGENDAMENTO DE CONSULTA*%0A%0A';
+          mensagem += '👤 *Nome:* ' + encodeURIComponent(nome) + '%0A';
+          mensagem += '📧 *E-mail:* ' + encodeURIComponent(email) + '%0A';
+          mensagem += '📱 *Telefone:* ' + encodeURIComponent(telefone) + '%0A';
+                    
+          // Adicionar descrição do caso se preenchido
+          if (caso) {
+            mensagem += '%0A📋 *Descrição do caso:*%0A';
+            mensagem += encodeURIComponent(caso) + '%0A';
+          }
+                    
+          mensagem += '%0A_Aguardo retorno para agendar minha consulta! 😊_';
+                    
+          // URL do WhatsApp
+          const whatsappUrl = 'https://wa.me/5555996147772?text=' + mensagem;
+                    
+          // Abrir WhatsApp
+          window.open(whatsappUrl, '_blank');
+                    
+          // Feedback visual
+          const submitBtn = document.getElementById('submitBtn');
+          const textoOriginal = submitBtn.textContent;
+          submitBtn.textContent = '✅ Abrindo WhatsApp...';
+          submitBtn.style.background = '#25D366';
+                    
+          // Limpar formulário após 2 segundos
+          setTimeout(function() {
+            form.reset();
+            submitBtn.textContent = textoOriginal;
+            submitBtn.style.background = '';
+            alert('✅ WhatsApp aberto! Envie a mensagem para confirmar seu agendamento.');
+          }, 2000);
+        });
+      }
+    });
+
+    // Initialize Swiper Carousels
+    const quemSomosSwiper = new Swiper('.quemSomosSwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    const servicosSwiper = new Swiper('.servicosSwiper', {
+      loop: true,
+      slidesPerView: 2.5,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 2.5,
+          spaceBetween: 25,
+        },
+        1400: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    // Testimonials: load from JSON and initialize Swiper
+    let testimonialsSwiper;
+    async function loadAndInitTestimonials() {
+      try {
+        const res = await fetch('data/testimonials.json');
+        const items = await res.json();
+        const wrapper = document.querySelector('.testimonialsSwiper .swiper-wrapper');
+        wrapper.innerHTML = '';
+        items.forEach(t => {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide';
+          const shortText = t.text && t.text.length > 160 ? t.text.slice(0,160) + '...' : (t.text || '');
+          const hasLong = t.text && t.text.length > 160;
+          const responseHtml = t.response ? `<div class="testimonial-response">Resposta: ${t.response}</div>` : '';
+          slide.innerHTML = `<div class="testimonial-card">
+            <p class="testimonial-quote">${shortText}</p>
+            ${ hasLong ? `<button class="read-more" data-full="${encodeURIComponent(t.text)}">Ler mais</button>` : '' }
+            ${ responseHtml }
+            <div class="testimonial-meta">
+              <div class="testimonial-author"><strong>${t.name}</strong>
+                <div class="stars">${'⭐'.repeat(t.rating)}</div>
+                <small>${t.date}</small>
+              </div>
+            </div>
+          </div>`;
+          wrapper.appendChild(slide);
+        });
+
+        testimonialsSwiper = new Swiper('.testimonialsSwiper', {
+          loop: true,
+          autoplay: { delay: 5000, disableOnInteraction: false },
+          slidesPerView: 1,
+          spaceBetween: 20,
+          pagination: { el: '.testimonials-pagination', clickable: true },
+          navigation: { nextEl: '.testimonials-button-next', prevEl: '.testimonials-button-prev' },
+          breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+        });
+
+        // Ler mais / Ler menos nos depoimentos (delegation)
+        document.addEventListener('click', function(e) {
+          if (e.target && e.target.matches('.read-more')) {
+            const btn = e.target;
+            const card = btn.closest('.testimonial-card');
+            const p = card.querySelector('.testimonial-quote');
+            const full = decodeURIComponent(btn.dataset.full || '');
+            if (btn.classList.contains('expanded')) {
+              p.textContent = full.slice(0,160) + '...';
+              btn.textContent = 'Ler mais';
+              btn.classList.remove('expanded');
+            } else {
+              p.textContent = full;
+              btn.textContent = 'Ler menos';
+              btn.classList.add('expanded');
+            }
+          }
+        });
+      } catch (err) {
+        console.error('Erro ao carregar depoimentos:', err);
+      }
+    }
+
+    loadAndInitTestimonials();
+
+    // Carrega as imagens da Dra. Karina no carrossel da seção "Quem Somos"
+    (function(){
+      const manifestUrl = 'images/dra-karina/gallery.json';
+      const wrapper = document.querySelector('.draKarinaSwiper .swiper-wrapper');
+
+      async function exists(url) {
+        try {
+          const r = await fetch(url, { method: 'HEAD' });
+          return r && r.ok;
+        } catch (e) { return false; }
+      }
+
+      async function init() {
+        if (!wrapper) return;
+        wrapper.innerHTML = '';
+
+        try {
+          const res = await fetch(manifestUrl);
+          if (!res.ok) throw new Error('manifest not found');
+          const images = await res.json();
+
+          // Detectar automaticamente se há versões responsivas para cada imagem
+          for (let i = 0; i < images.length; i++) {
+            const item = images[i];
+            const basename = item.basename || '';
+            const baseNoExt = basename.replace(/\.[^.]+$/, '');
+            const basePath = `images/dra-karina/${baseNoExt}`;
+
+            // Se não especificado, verifique se existe a versão -1200.jpg para marcar como responsiva
+            if (typeof item.responsive === 'undefined') {
+              const has1200 = await exists(basePath + '-1200.jpg');
+              item.responsive = has1200;
+            }
+
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide';
+            const alt = item.alt || `Dra. Karina ${i+1}`;
+
+            // Usar srcset para imagens responsivas locais
+            if (item.responsive) {
+              slide.innerHTML = `
+                <img src="${basePath}-800.jpg"
+                     srcset="${basePath}-480.jpg 480w, ${basePath}-800.jpg 800w, ${basePath}-1200.jpg 1200w"
+                     sizes="(min-width:1200px) 33vw, (min-width:900px) 50vw, 100vw"
+                     alt="${alt}"
+                     loading="lazy">
+              `;
+            } else {
+              // Usar imagem simples sem versões otimizadas
+              slide.innerHTML = `<img src="images/dra-karina/${basename}" alt="${alt}" loading="lazy">`;
+            }
+
+            wrapper.appendChild(slide);
+          }
+
+          // Destroy previous instance if exists
+          if (window.draSwiper && typeof window.draSwiper.destroy === 'function') {
+            window.draSwiper.destroy(true, true);
+          }
+
+          window.draSwiper = new Swiper('.draKarinaSwiper', {
+            loop: true,
+            autoplay: { delay: 7000, disableOnInteraction: false },
+            slidesPerView: 2.5,
+            slidesPerGroup: 2,
+            spaceBetween: 30,
+            centeredSlides: false,
+            pagination: { el: '.dra-pagination', clickable: true },
+            navigation: { nextEl: '.dra-button-next', prevEl: '.dra-button-prev' },
+            breakpoints: {
+              480: { slidesPerView: 1.5, slidesPerGroup: 2, spaceBetween: 15 },
+              768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 2.5, slidesPerGroup: 2, spaceBetween: 25 },
+              1400: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 30 }
+            }
+          });
+
+          // Pausa autoplay no hover/focus para melhor usabilidade
+          const el = document.querySelector('.draKarinaSwiper');
+          if (el) {
+            el.addEventListener('mouseenter', () => window.draSwiper.autoplay.stop());
+            el.addEventListener('mouseleave', () => window.draSwiper.autoplay.start());
+            el.addEventListener('focusin', () => window.draSwiper.autoplay.stop());
+            el.addEventListener('focusout', () => window.draSwiper.autoplay.start());
+          }
+        } catch (err) {
+          console.warn('Erro ao carregar galeria de imagens:', err);
+        }
+      }
+
+      init();
+    })();
+
+    // Hero video controls & accessibility
+    (function(){
+      const video = document.getElementById('heroVideo');
+      const toggle = document.querySelector('.hero-video-toggle');
+      if (!video) return;
+
+      // Preferências de movimento reduzido: não iniciar autoplay se usuário preferir
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        video.pause();
+        video.removeAttribute('autoplay');
+        if (toggle) { toggle.textContent = '▶'; toggle.setAttribute('aria-label','Reproduzir vídeo'); }
+      }
+
+      toggle && toggle.addEventListener('click', function(){
+        if (video.paused) {
+          video.play();
+          this.textContent = '⏸';
+          this.setAttribute('aria-label','Pausar vídeo');
+        } else {
+          video.pause();
+          this.textContent = '▶';
+          this.setAttribute('aria-label','Reproduzir vídeo');
+        }
+      });
+
+      // Helper para trocar dinamicamente o vídeo (use: window.setHeroVideo('url.mp4', 'video/mp4', 'poster.jpg'))
+      window.setHeroVideo = function(src, type='video/mp4', poster=''){
+        if (!video) return;
+        try {
+          video.pause();
+          // remove fontes anteriores
+          Array.from(video.querySelectorAll('source')).forEach(n => n.remove());
+          const s = document.createElement('source'); s.src = src; s.type = type; video.appendChild(s);
+          if (poster) video.poster = poster;
+          video.load();
+          video.play().catch(()=>{});
+        } catch (e) { console.warn('Erro ao definir vídeo do hero', e); }
+      };
+    })();
+  </script>
+</body>
+</html>

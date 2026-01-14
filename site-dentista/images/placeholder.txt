@@ -1,0 +1,2 @@
+Coloque aqui as imagens: hero.jpg, profile.jpg e outras.
+Sugestão: hero.jpg = foto da clínica ou banner; profile.jpg = foto da dentista (120x120)
