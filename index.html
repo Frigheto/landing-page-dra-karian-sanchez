@@ -1525,41 +1525,47 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Aguarda o carregamento completo do DOM e do Swiper
-    document.addEventListener('DOMContentLoaded', function() {
-      
-    // Toggle Mobile Menu
-    function toggleMenu() {
+    // Funções globais que precisam ser acessadas pelo HTML
+    window.toggleMenu = function() {
       const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
-    
-    // Tornar toggleMenu global
-    window.toggleMenu = toggleMenu;
+      if (navLinks) {
+        navLinks.classList.toggle('active');
+      }
+    };
 
-    // Fechar menu ao clicar em um link (mobile)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', function() {
-        const navLinks = document.getElementById('navLinks');
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-        }
-      });
-    });
-
-    // Toggle Depoimentos
     window.toggleDepoimento = function(element) {
       const item = element.parentElement;
       const allItems = document.querySelectorAll('.depoimento-item');
-            
+      
       allItems.forEach(i => {
         if (i !== item) {
           i.classList.remove('active');
         }
       });
-            
+      
       item.classList.toggle('active');
     };
+
+    // Aguarda o carregamento completo
+    function initSite() {
+      try {
+
+    // Aguarda o carregamento completo
+    function initSite() {
+      try {
+
+    // Fechar menu ao clicar em um link (mobile)
+    const navLinks = document.querySelectorAll('.nav-links a');
+    if (navLinks) {
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          const menu = document.getElementById('navLinks');
+          if (menu && menu.classList.contains('active')) {
+            menu.classList.remove('active');
+          }
+        });
+      });
+    }
 
     // Função de envio do formulário para WhatsApp
     const form = document.getElementById('agendamentoForm');
@@ -1577,12 +1583,12 @@
                   
         e.target.value = value;
       });
-      }
-            
-      // Envio do formulário
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
+    }
+          
+    // Envio do formulário
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
                     
           // Pegar valores dos campos
           const nome = document.getElementById('nome').value.trim();
@@ -1640,7 +1646,9 @@
       }
     }
 
-    // Initialize Swiper Carousels
+    // Initialize Swiper Carousels apenas se a biblioteca Swiper estiver disponível
+    if (typeof Swiper !== 'undefined') {
+    
     const quemSomosSwiper = new Swiper('.quemSomosSwiper', {
       loop: true,
       autoplay: {
@@ -1889,7 +1897,19 @@
       };
     })();
     
-    }); // Fim do DOMContentLoaded
+    } // fim do if Swiper
+    
+    } catch(err) {
+      console.error('Erro ao inicializar site:', err);
+    }
+    } // Fim da função initSite
+    
+    // Executar quando DOM estiver pronto
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSite);
+    } else {
+      initSite();
+    }
   </script>
 </body>
 </html>
