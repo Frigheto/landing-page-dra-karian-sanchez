@@ -1,3 +1,30 @@
+// Lazy Loading do Vídeo Hero
+function initLazyVideo() {
+  const video = document.getElementById('heroVideo');
+  if (!video) return;
+
+  const videoSrc = video.dataset.src;
+  if (!videoSrc) return;
+
+  // Usar Intersection Observer para carregar apenas quando visível
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const source = video.querySelector('source');
+        if (source && !source.src) {
+          source.src = videoSrc;
+          video.load();
+          // Auto-play após carregar
+          video.play().catch(e => console.log('Autoplay bloqueado:', e));
+          observer.disconnect();
+        }
+      }
+    });
+  }, { rootMargin: '50px' }); // Carrega 50px antes de aparecer
+
+  observer.observe(video);
+}
+
 // Funções globais
 window.toggleMenu = function() {
   const navLinks = document.getElementById('navLinks');
@@ -15,6 +42,9 @@ window.toggleDepoimento = function(element) {
 // Inicialização do site
 function initSite() {
   console.log('Inicializando site...');
+  
+  // Inicializar lazy loading do vídeo
+  initLazyVideo();
   
   // Fechar menu mobile ao clicar em links
   document.querySelectorAll('.nav-links a').forEach(link => {
