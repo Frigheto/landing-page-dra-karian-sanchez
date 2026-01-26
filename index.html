@@ -403,6 +403,51 @@
       background: var(--white);
     }
 
+    /* Seção Sobre a Dra. Karina */
+    .sobre-karina {
+      padding: 100px 5%;
+      background: var(--white);
+    }
+
+    .sobre-karina .sobre-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 4fr 3fr; /* foto ainda menor */
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .sobre-karina .sobre-photo {
+      width: 100%;
+    }
+
+    .sobre-karina .sobre-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+
+    .sobre-karina .sobre-text {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    .sobre-karina .sobre-text h2 {
+      font-size: 2rem;
+      color: var(--dark-color);
+      margin-bottom: 1rem;
+    }
+
+    .sobre-karina .sobre-text p {
+      color: var(--text-light);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
     .quem-somos-content {
       max-width: 1400px;
       margin: 0 auto;
@@ -1081,6 +1126,26 @@
         padding: 60px 5%;
       }
 
+      /* Seção Sobre Mobile */
+      .sobre-karina {
+        padding: 60px 5%;
+      }
+
+      .sobre-karina .sobre-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .sobre-karina .sobre-text h2 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .sobre-karina .sobre-text p {
+        font-size: 0.95rem;
+        text-align: justify;
+      }
+
       .quem-somos-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1380,6 +1445,22 @@
     </div>
   </section>
 
+  <!-- Seção Sobre a Dra. Karina -->
+  <section id="sobre" class="sobre-karina" aria-labelledby="sobre-title">
+    <div class="sobre-wrapper">
+      <div class="sobre-photo">
+        <img
+          src="foto%20dra%20karina%20sanchez.jpeg"
+          alt="Foto profissional em consultório"
+          loading="lazy">
+      </div>
+      <div class="sobre-text">
+        <h2 id="sobre-title">Sobre a Dra. Karina</h2>
+        <p>Sou Karina de Castro Sanchez, cirurgiã-dentista formada em Odontologia pela UNIFRA (atual UFN) desde 2009 e especialista em Ortodontia desde 2016. Apaixonada pela odontologia, trabalho com dedicação para transformar sorrisos, unindo saúde, estética e bem-estar, sempre buscando oferecer um atendimento humano e personalizado.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Seção Produtos/Serviços -->
   <section id="servicos" class="produtos-servicos">
     <h2 class="section-title">Tratamentos e Serviços</h2>
@@ -1388,43 +1469,78 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&auto=format&fit=crop&q=75" alt="Clareamento no consultório" loading="lazy">
+              <img 
+                src="images/servicos/clareamento-consultorio-1200.jpg"
+                srcset="images/servicos/clareamento-consultorio-480.jpg 480w, images/servicos/clareamento-consultorio-800.jpg 800w, images/servicos/clareamento-consultorio-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px"
+                alt="Clareamento dental no consultório"
+                loading="lazy">
               <h3>Clareamento Dental - No Consultório</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&auto=format&fit=crop&q=75" alt="Clareamento caseiro" loading="lazy">
+              <img 
+                src="images/servicos/clareamento-caseiro-1200.jpg"
+                srcset="images/servicos/clareamento-caseiro-480.jpg 480w, images/servicos/clareamento-caseiro-800.jpg 800w, images/servicos/clareamento-caseiro-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px"
+                alt="Clareamento dental caseiro"
+                loading="lazy">
               <h3>Clareamento Dental Caseiro</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="images/dra-karina/invisalign.jpg" alt="Invisalign" loading="lazy">
+              <img 
+                src="images/servicos/invisalign-1200.jpg"
+                srcset="images/servicos/invisalign-480.jpg 480w, images/servicos/invisalign-800.jpg 800w, images/servicos/invisalign-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px"
+                alt="Alinhadores transparentes Invisalign"
+                loading="lazy">
               <h3>Invisalign</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=75" alt="Botox" loading="lazy">
+              <img 
+                src="images/servicos/botox-harmonizacao-1200.jpg"
+                srcset="images/servicos/botox-harmonizacao-480.jpg 480w, images/servicos/botox-harmonizacao-800.jpg 800w, images/servicos/botox-harmonizacao-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px"
+                alt="Botox e harmonização facial"
+                loading="lazy">
               <h3>Botox e Harmonização</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop&q=75" alt="Clínica Geral" loading="lazy">
+              <img 
+                src="images/servicos/clinica-geral-1200.jpg"
+                srcset="images/servicos/clinica-geral-480.jpg 480w, images/servicos/clinica-geral-800.jpg 800w, images/servicos/clinica-geral-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px"
+                alt="Atendimentos de clínica geral"
+                loading="lazy">
               <h3>Clínica Geral</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&auto=format&fit=crop&q=75" alt="Limpeza" loading="lazy">
+              <img 
+                src="images/servicos/limpeza-prevencao-1200.jpg"
+                srcset="images/servicos/limpeza-prevencao-480.jpg 480w, images/servicos/limpeza-prevencao-800.jpg 800w, images/servicos/limpeza-prevencao-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px"
+                alt="Limpeza dental e prevenção"
+                loading="lazy">
               <h3>Limpeza e Prevenção</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=75" alt="Ortodontia" loading="lazy">
+              <img 
+                src="images/servicos/ortodontia-1200.jpg"
+                srcset="images/servicos/ortodontia-480.jpg 480w, images/servicos/ortodontia-800.jpg 800w, images/servicos/ortodontia-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px"
+                alt="Tratamentos ortodônticos"
+                loading="lazy">
               <h3>Ortodontia</h3>
             </div>
           </div>
