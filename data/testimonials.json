@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Maria Silva",
+    "date": "2025-01-15",
+    "rating": 5,
+    "text": "Nunca imaginei que sorrir pudesse me transformar tanto. O tratamento com a Dra. Karina foi eficiente, o atendimento muito humano e o resultado superou minhas expectativas.",
+    "response": "Ficamos muito felizes com seu depoimento! Agradecemos pela confiança — seguimos à disposição."
+  },
+  {
+    "name": "João Santos",
+    "date": "2024-11-10",
+    "rating": 5,
+    "text": "O Invisalign mudou minha rotina sem afetar minha aparência — discreto e muito eficaz. A equipe foi atenciosa desde a primeira consulta até o resultado final.",
+    "response": "Que bom ouvir isso, João! Obrigada por compartilhar sua experiência."
+  },
+  {
+    "name": "Ana Paula",
+    "date": "2024-10-05",
+    "rating": 5,
+    "text": "Fiz clareamento e o resultado ficou natural e duradouro. Ambiente acolhedor, equipe competente e explicações claras sobre o processo.",
+    "response": "Agradecemos sua avaliação, Ana — que bom que ficou satisfeita com o resultado!"
+  },
+  {
+    "name": "Carlos Eduardo",
+    "date": "2024-09-12",
+    "rating": 5,
+    "text": "Procurei harmonização por recomendação e o resultado ficou natural, com muito cuidado e profissionalismo. Senti-me seguro durante todo o processo.",
+    "response": "Ficamos felizes em saber que se sentiu seguro, Carlos. Obrigada pela confiança!"
+  },
+  {
+    "name": "Fernanda Costa",
+    "date": "2024-08-20",
+    "rating": 5,
+    "text": "Coloquei lentes de contato dental e recuperei minha autoestima. Atendimento personalizado e atenção a cada detalhe — resultado impecável.",
+    "response": "Que alegria ler seu depoimento, Fernanda! Obrigada por confiar no nosso trabalho."
+  }
+]
