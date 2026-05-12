@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#d4a574">
   <title>Dra. Karina C. Sanchez - Ortodontia e Estética</title>
-  <meta name="description" content="Transformando sorrisos e promovendo autoestima. Especialista em Ortodontia, Clínica Geral, Botox e Invisalign em Santa Maria/RS.">
-  
+  <meta name="description"
+    content="Transformando sorrisos e promovendo autoestima. Especialista em Ortodontia, Clínica Geral, Botox e Invisalign em Santa Maria/RS.">
+
   <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18057099220"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'AW-18057099220');
   </script>
@@ -19,16 +21,21 @@
   <!-- Google Fonts - Fontes Modernas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Preconnect para melhorar performance -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://images.unsplash.com">
   <link rel="dns-prefetch" href="https://www.google.com">
-  
+
   <!-- Swiper CSS com media para carregamento otimizado -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'; this.onload=null;">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+    onload="this.media='all'; this.onload=null;">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  </noscript>
   <style>
     * {
       margin: 0;
@@ -64,7 +71,12 @@
       position: relative;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
     }
@@ -74,7 +86,8 @@
       max-width: 100%;
     }
 
-    img, video {
+    img,
+    video {
       max-width: 100%;
       height: auto;
       display: block;
@@ -109,7 +122,7 @@
       position: sticky;
       top: 0;
       background: var(--white);
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
       z-index: 1000;
     }
 
@@ -187,7 +200,8 @@
       white-space: nowrap;
       box-shadow: 0 2px 10px rgba(212, 165, 116, 0.25);
       display: inline-block;
-      min-height: 44px; /* Tamanho mínimo recomendado para touch targets */
+      min-height: 44px;
+      /* Tamanho mínimo recomendado para touch targets */
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -215,7 +229,7 @@
       justify-content: center;
       border-radius: 10px;
       background: transparent;
-      border: 1px solid rgba(44,44,44,0.06);
+      border: 1px solid rgba(44, 44, 44, 0.06);
       color: var(--primary-color);
       text-decoration: none;
       transition: all 0.22s ease;
@@ -274,8 +288,10 @@
       position: absolute;
       inset: 0;
       overflow: hidden;
-      z-index: -2; /* behind overlay */
-      background: #000; /* fallback color */
+      z-index: -2;
+      /* behind overlay */
+      background: #000;
+      /* fallback color */
     }
 
     .hero-media video {
@@ -296,17 +312,19 @@
       top: 18px;
       right: 18px;
       z-index: 2;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255, 255, 255, 0.95);
       border: none;
       padding: 8px 10px;
       border-radius: 8px;
       cursor: pointer;
       font-weight: 600;
       transition: transform .15s;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     }
 
-    .hero-video-toggle:hover { transform: scale(1.04); }
+    .hero-video-toggle:hover {
+      transform: scale(1.04);
+    }
 
     .hero-overlay {
       position: absolute;
@@ -357,7 +375,7 @@
       background: var(--white);
       padding: 2.5rem;
       border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     }
 
     .hero-form-card h3 {
@@ -383,7 +401,8 @@
       padding: 12px;
       border: 2px solid #e0e0e0;
       border-radius: 10px;
-      font-size: 16px; /* Mínimo 16px para prevenir zoom automático no iOS */
+      font-size: 16px;
+      /* Mínimo 16px para prevenir zoom automático no iOS */
       transition: border-color 0.3s;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
@@ -442,7 +461,7 @@
       width: 100%;
       height: auto;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
       object-fit: cover;
     }
 
@@ -494,7 +513,8 @@
       max-width: 1400px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 4fr 3fr; /* foto ainda menor */
+      grid-template-columns: 4fr 3fr;
+      /* foto ainda menor */
       gap: 3rem;
       align-items: center;
     }
@@ -507,7 +527,7 @@
       width: 100%;
       height: auto;
       border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
       object-fit: cover;
     }
 
@@ -606,7 +626,7 @@
       height: 360px;
       object-fit: cover;
       border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
       transition: transform .35s ease;
     }
 
@@ -641,6 +661,7 @@
         height: 280px;
       }
     }
+
     .swiper-button-next,
     .swiper-button-prev {
       color: var(--primary-color);
@@ -656,7 +677,7 @@
     .faq-depoimentos .swiper-button-next,
     .faq-depoimentos .swiper-button-prev {
       color: var(--white);
-      background: rgba(212,165,116,0.2);
+      background: rgba(212, 165, 116, 0.2);
       border-radius: 50%;
       width: 45px;
       height: 45px;
@@ -666,11 +687,11 @@
 
     .faq-depoimentos .swiper-button-next:hover,
     .faq-depoimentos .swiper-button-prev:hover {
-      background: rgba(212,165,116,0.4);
+      background: rgba(212, 165, 116, 0.4);
     }
 
     .faq-depoimentos .swiper-pagination-bullet {
-      background: rgba(255,255,255,0.4);
+      background: rgba(255, 255, 255, 0.4);
       transition: all 0.3s ease;
     }
 
@@ -679,18 +700,19 @@
     }
 
     @media (max-width: 768px) {
+
       .swiper-button-next,
       .swiper-button-prev {
         width: 35px;
         height: 35px;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 50%;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
       }
 
       .faq-depoimentos .swiper-button-next,
       .faq-depoimentos .swiper-button-prev {
-        background: rgba(255,255,255,0.25);
+        background: rgba(255, 255, 255, 0.25);
         width: 35px;
         height: 35px;
       }
@@ -788,122 +810,127 @@
       margin-bottom: 4rem;
     }
 
-        /* Depoimentos - Carousel de Feedbacks (sem imagens) */
-        .testimonial-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f9f7f4 100%);
-            padding: 2.5rem;
-            border-radius: 20px;
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            min-height: 240px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 0 1px rgba(212,165,116,0.3);
-            color: var(--text-dark);
-            border: 1px solid rgba(212,165,116,0.2);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.35), 0 0 1px rgba(212,165,116,0.4);
-        }
-
-        .testimonial-quote {
-            font-size: 1.05rem;
-            color: #1a1a1a;
-            margin-bottom: 1.25rem;
-            line-height: 1.8;
-            max-height: 6.6rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-weight: 500;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.2px;
-        }
-
-        .testimonial-response {
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-            margin-top: 1rem;
-            background: linear-gradient(135deg, rgba(212,165,116,0.15) 0%, rgba(212,165,116,0.08) 100%);
-            padding: 0.75rem 1.25rem;
-            border-radius: 50px;
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid rgba(212,165,116,0.25);
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-response:hover {
-            background: linear-gradient(135deg, rgba(212,165,116,0.25) 0%, rgba(212,165,116,0.15) 100%);
-            border-color: rgba(212,165,116,0.4);
-        }
-
-        .read-more {
-            background: transparent;
-            border: none;
-            color: var(--primary-color);
-            font-weight: 600;
-            cursor: pointer;
-            padding: 0;
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: var(--secondary-color);
-            transform: translateX(2px);
-        }
-
-        .read-more:focus { outline: 2px solid rgba(212,165,116,0.3); border-radius: 6px; padding: 2px 6px; }
-
-        .testimonial-meta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .testimonial-author {
-            text-align: center;
-        }
-
-        .testimonial-author strong {
-            color: var(--primary-color);
-            display: block;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.05rem;
-            margin-bottom: 0.25rem;
-            font-weight: 700;
-        }
-
-        .testimonial-author small {
-            color: #666;
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
+    /* Depoimentos - Carousel de Feedbacks (sem imagens) */
+    .testimonial-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f9f7f4 100%);
+      padding: 2.5rem;
+      border-radius: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 1px rgba(212, 165, 116, 0.3);
+      color: var(--text-dark);
+      border: 1px solid rgba(212, 165, 116, 0.2);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
       overflow: hidden;
+    }
+
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35), 0 0 1px rgba(212, 165, 116, 0.4);
+    }
+
+    .testimonial-quote {
+      font-size: 1.05rem;
+      color: #1a1a1a;
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+      max-height: 6.6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.2px;
+    }
+
+    .testimonial-response {
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      margin-top: 1rem;
+      background: linear-gradient(135deg, rgba(212, 165, 116, 0.15) 0%, rgba(212, 165, 116, 0.08) 100%);
+      padding: 0.75rem 1.25rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid rgba(212, 165, 116, 0.25);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-response:hover {
+      background: linear-gradient(135deg, rgba(212, 165, 116, 0.25) 0%, rgba(212, 165, 116, 0.15) 100%);
+      border-color: rgba(212, 165, 116, 0.4);
+    }
+
+    .read-more {
+      background: transparent;
+      border: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .read-more:hover {
+      color: var(--secondary-color);
+      transform: translateX(2px);
+    }
+
+    .read-more:focus {
+      outline: 2px solid rgba(212, 165, 116, 0.3);
+      border-radius: 6px;
+      padding: 2px 6px;
+    }
+
+    .testimonial-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-author {
+      text-align: center;
+    }
+
+    .testimonial-author strong {
+      color: var(--primary-color);
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+
+    .testimonial-author small {
+      color: #666;
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    overflow: hidden;
     }
 
     .video-item video {
@@ -918,7 +945,7 @@
       bottom: 20px;
       left: 20px;
       right: 20px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       padding: 1rem;
       border-radius: 10px;
       font-size: 1.3rem;
@@ -931,7 +958,7 @@
     }
 
     .depoimento-item {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       margin-bottom: 1rem;
       border-radius: 10px;
       overflow: hidden;
@@ -947,7 +974,7 @@
     }
 
     .depoimento-header:hover {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.15);
     }
 
     .depoimento-content {
@@ -977,7 +1004,7 @@
 
     .testimonial-card:hover .stars {
       transform: scale(1.15);
-      filter: drop-shadow(0 2px 4px rgba(212,165,116,0.3));
+      filter: drop-shadow(0 2px 4px rgba(212, 165, 116, 0.3));
     }
 
     /* Seção Contato */
@@ -1078,7 +1105,7 @@
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       color: #999;
     }
 
@@ -1098,9 +1125,20 @@
 
     /* Botão Flutuante Agende uma Consulta */
     @keyframes pulse-btn {
-      0%   { box-shadow: 0 0 0 0 rgba(37, 162, 68, 0.7), 0 8px 30px rgba(37,162,68,0.4); transform: translateY(0) scale(1); }
-      50%  { box-shadow: 0 0 0 18px rgba(37, 162, 68, 0), 0 12px 40px rgba(37,162,68,0.5); transform: translateY(-5px) scale(1.03); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 162, 68, 0), 0 8px 30px rgba(37,162,68,0.4); transform: translateY(0) scale(1); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 162, 68, 0.7), 0 8px 30px rgba(37, 162, 68, 0.4);
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        box-shadow: 0 0 0 18px rgba(37, 162, 68, 0), 0 12px 40px rgba(37, 162, 68, 0.5);
+        transform: translateY(-5px) scale(1.03);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 162, 68, 0), 0 8px 30px rgba(37, 162, 68, 0.4);
+        transform: translateY(0) scale(1);
+      }
     }
 
     .hero-cta-float {
@@ -1247,7 +1285,7 @@
         flex-direction: column;
         padding: 2rem;
         transition: left 0.3s;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         justify-content: flex-start;
         gap: 0;
         z-index: 999;
@@ -1548,7 +1586,7 @@
       }
     }
   </style>
-    <script type="application/ld+json">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Dentist",
@@ -1607,11 +1645,13 @@
     }
     </script>
 </head>
+
 <body>
   <!-- Header -->
   <div class="header-top">
     <a href="mailto:karina_c_sanchez@hotmail.com">karina_c_sanchez@hotmail.com</a>
-    <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+    <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+      onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
     <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">@karinacastrosanchez</a>
   </div>
 
@@ -1627,18 +1667,31 @@
       </ul>
 
       <div class="contact-links" aria-hidden="false">
-        <a class="contact-link" href="mailto:karina_c_sanchez@hotmail.com" title="Enviar e-mail" aria-label="Enviar e-mail">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+        <a class="contact-link" href="mailto:karina_c_sanchez@hotmail.com" title="Enviar e-mail"
+          aria-label="Enviar e-mail">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z" />
+          </svg>
         </a>
-        <a class="contact-link" href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" title="WhatsApp" aria-label="WhatsApp" onclick="return gtag_report_conversion(this.href)">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.65.74 3.85a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+        <a class="contact-link" href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta"
+          target="_blank" title="WhatsApp" aria-label="WhatsApp" onclick="return gtag_report_conversion(this.href)">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.65.74 3.85a1 1 0 01-.21 1.11l-2.2 2.2z" />
+          </svg>
         </a>
-        <a class="contact-link" href="https://www.instagram.com/karinacastrosanchez/" target="_blank" title="Instagram" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1112 17a4.5 4.5 0 010-9zm5.5-3a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+        <a class="contact-link" href="https://www.instagram.com/karinacastrosanchez/" target="_blank" title="Instagram"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1112 17a4.5 4.5 0 010-9zm5.5-3a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z" />
+          </svg>
         </a>
       </div>
 
-      <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="cta-button" onclick="return gtag_report_conversion(this.href)">Agendar Consulta</a>
+      <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+        class="cta-button" onclick="return gtag_report_conversion(this.href)">Agendar Consulta</a>
       <div class="mobile-menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -1651,20 +1704,24 @@
   <section id="inicio" class="hero-video">
     <!-- Hero video: carregamento otimizado com lazy loading -->
     <div class="hero-media" aria-hidden="true">
-      <video id="heroVideo" muted loop playsinline preload="none" poster="assets/images/hero-poster.jpg" data-src="assets/videos/hero-video.mp4">
+      <video id="heroVideo" muted loop playsinline preload="none" poster="assets/images/hero-poster.jpg"
+        data-src="assets/videos/hero-video.mp4">
         <source data-src="assets/videos/hero-video.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
       </video>
       <!-- Toggle botão para pausar/reproduzir o vídeo -->
-      <button class="hero-video-toggle" aria-controls="heroVideo" aria-label="Pausar vídeo" title="Pausar vídeo">Pausar</button>
+      <button class="hero-video-toggle" aria-controls="heroVideo" aria-label="Pausar vídeo"
+        title="Pausar vídeo">Pausar</button>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <h1>Transformando <span class="highlight">Sorrisos</span> e Promovendo <span class="highlight">Autoestima</span></h1>
+        <h1>Transformando <span class="highlight">Sorrisos</span> e Promovendo <span class="highlight">Autoestima</span>
+        </h1>
         <p><strong>Especialista em Ortodontia e Clínica Geral com Botox e Invisalign.</strong></p>
         <p>Recupere seu sorriso com segurança, conforto e rapidez na clínica Dra. Karina C. Sanchez.</p>
-        <p>Somos especialistas em ortodontia em Santa Maria (RS), com soluções avançadas como Invisalign e harmonização facial.</p>
+        <p>Somos especialistas em ortodontia em Santa Maria (RS), com soluções avançadas como Invisalign e harmonização
+          facial.</p>
       </div>
       <div class="hero-form-card" id="agendar">
         <h3>Agende a sua consulta hoje mesmo!</h3>
@@ -1683,7 +1740,9 @@
           </div>
           <div class="form-group">
             <label for="caso">Descreva seu caso</label>
-            <textarea id="caso" name="caso" rows="4" placeholder="Ex: Gostaria de fazer clareamento dental, tenho interesse em Invisalign, preciso de uma avaliação ortodôntica..." style="resize: vertical; min-height: 100px;"></textarea>
+            <textarea id="caso" name="caso" rows="4"
+              placeholder="Ex: Gostaria de fazer clareamento dental, tenho interesse em Invisalign, preciso de uma avaliação ortodôntica..."
+              style="resize: vertical; min-height: 100px;"></textarea>
           </div>
           <button type="submit" class="submit-button" id="submitBtn">
             Agendar consulta
@@ -1691,7 +1750,8 @@
         </form>
       </div>
       <div class="hero-cta-float">
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" onclick="return gtag_report_conversion(this.href)">
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+          onclick="return gtag_report_conversion(this.href)">
           Agende uma consulta
         </a>
       </div>
@@ -1703,18 +1763,20 @@
     <div class="quem-somos-content">
       <div class="sobre-wrapper-destaque">
         <div class="sobre-photo-destaque">
-          <img
-            src="foto%20dra%20karina%20sanchez.jpeg"
-            alt="Dra. Karina C. Sanchez - Especialista em Ortodontia"
+          <img src="foto%20dra%20karina%20sanchez.jpeg" alt="Dra. Karina C. Sanchez - Especialista em Ortodontia"
             loading="lazy">
         </div>
         <div class="quem-somos-text-destaque">
           <h2>Conheça a Dra. Karina C. Sanchez</h2>
           <h4>Especialista em Ortodontia e Clínica Geral</h4>
-          <p><strong>Cirurgiã-dentista formada em Odontologia pela UNIFRA (atual UFN) desde 2009 e especialista em Ortodontia desde 2016.</strong></p>
-          <p>Apaixonada pela odontologia, trabalho com dedicação para transformar sorrisos, unindo saúde, estética e bem-estar, sempre buscando oferecer um atendimento humanizado e personalizado.</p>
-          <p>Com especialização em Invisalign e harmonização facial, atendo com tecnologia de ponta e abordagem humanizada para seus melhores resultados.</p>
-          <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="cta-button" onclick="return gtag_report_conversion(this.href)">Agendar Consulta com a Dra. Karina</a>
+          <p><strong>Cirurgiã-dentista formada em Odontologia pela UNIFRA (atual UFN) desde 2009 e especialista em
+              Ortodontia desde 2016.</strong></p>
+          <p>Apaixonada pela odontologia, trabalho com dedicação para transformar sorrisos, unindo saúde, estética e
+            bem-estar, sempre buscando oferecer um atendimento humanizado e personalizado.</p>
+          <p>Com especialização em Invisalign e harmonização facial, atendo com tecnologia de ponta e abordagem
+            humanizada para seus melhores resultados.</p>
+          <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+            class="cta-button" onclick="return gtag_report_conversion(this.href)">Agendar Consulta com a Dra. Karina</a>
         </div>
       </div>
 
@@ -1739,14 +1801,14 @@
   <section id="sobre" class="sobre-karina" aria-labelledby="sobre-title">
     <div class="sobre-wrapper">
       <div class="sobre-photo">
-        <img
-          src="foto%20dra%20karina%20sanchez.jpeg"
-          alt="Foto profissional em consultório"
-          loading="lazy">
+        <img src="foto%20dra%20karina%20sanchez.jpeg" alt="Foto profissional em consultório" loading="lazy">
       </div>
       <div class="sobre-text">
         <h2 id="sobre-title">Sobre a Dra. Karina</h2>
-        <p>Sou Karina de Castro Sanchez, cirurgiã-dentista formada em Odontologia pela UNIFRA (atual UFN) desde 2009 e especialista em Ortodontia desde 2016. Apaixonada pela odontologia, trabalho com dedicação para transformar sorrisos, unindo saúde, estética e bem-estar, sempre buscando oferecer um atendimento humano e personalizado.</p>
+        <p>Sou Karina de Castro Sanchez, cirurgiã-dentista formada em Odontologia pela UNIFRA (atual UFN) desde 2009 e
+          especialista em Ortodontia desde 2016. Apaixonada pela odontologia, trabalho com dedicação para transformar
+          sorrisos, unindo saúde, estética e bem-estar, sempre buscando oferecer um atendimento humano e personalizado.
+        </p>
       </div>
     </div>
   </section>
@@ -1759,78 +1821,57 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
-                src="images/servicos/clareamento-consultorio-1200.jpg"
+              <img src="images/servicos/clareamento-consultorio-1200.jpg"
                 srcset="images/servicos/clareamento-consultorio-480.jpg 480w, images/servicos/clareamento-consultorio-800.jpg 800w, images/servicos/clareamento-consultorio-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Clareamento dental no consultório"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Clareamento dental no consultório" loading="lazy">
               <h3>Clareamento Dental - No Consultório</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
-                src="images/servicos/clareamento-caseiro-1200.jpg"
+              <img src="images/servicos/clareamento-caseiro-1200.jpg"
                 srcset="images/servicos/clareamento-caseiro-480.jpg 480w, images/servicos/clareamento-caseiro-800.jpg 800w, images/servicos/clareamento-caseiro-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Clareamento dental caseiro"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Clareamento dental caseiro" loading="lazy">
               <h3>Clareamento Dental Caseiro</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
-                src="images/servicos/invisalign-1200.jpg"
+              <img src="images/servicos/invisalign-1200.jpg"
                 srcset="images/servicos/invisalign-480.jpg 480w, images/servicos/invisalign-800.jpg 800w, images/servicos/invisalign-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Alinhadores transparentes Invisalign"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Alinhadores transparentes Invisalign" loading="lazy">
               <h3>Invisalign</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
-                src="images/servicos/botox-harmonizacao-1200.jpg"
+              <img src="images/servicos/botox-harmonizacao-1200.jpg"
                 srcset="images/servicos/botox-harmonizacao-480.jpg 480w, images/servicos/botox-harmonizacao-800.jpg 800w, images/servicos/botox-harmonizacao-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Botox e harmonização facial"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Botox e harmonização facial" loading="lazy">
               <h3>Botox e Harmonização</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
-                src="images/servicos/clinica-geral-1200.jpg"
+              <img src="images/servicos/clinica-geral-1200.jpg"
                 srcset="images/servicos/clinica-geral-480.jpg 480w, images/servicos/clinica-geral-800.jpg 800w, images/servicos/clinica-geral-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Atendimentos de clínica geral"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Atendimentos de clínica geral" loading="lazy">
               <h3>Clínica Geral</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
-                src="images/servicos/limpeza-prevencao-1200.jpg"
+              <img src="images/servicos/limpeza-prevencao-1200.jpg"
                 srcset="images/servicos/limpeza-prevencao-480.jpg 480w, images/servicos/limpeza-prevencao-800.jpg 800w, images/servicos/limpeza-prevencao-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Limpeza dental e prevenção"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Limpeza dental e prevenção" loading="lazy">
               <h3>Limpeza e Prevenção</h3>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
-                src="images/servicos/ortodontia-1200.jpg"
+              <img src="images/servicos/ortodontia-1200.jpg"
                 srcset="images/servicos/ortodontia-480.jpg 480w, images/servicos/ortodontia-800.jpg 800w, images/servicos/ortodontia-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Tratamentos ortodônticos"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Tratamentos ortodônticos" loading="lazy">
               <h3>Ortodontia</h3>
             </div>
           </div>
@@ -1847,22 +1888,22 @@
     <div class="faq-depoimentos-grid">
       <h2 class="section-title-white">Perguntas Frequentes & Depoimentos</h2>
 
-            <!-- Carrossel de Depoimentos (Texto) -->
-            <div class="testimonials-carousel">
-                <div class="swiper testimonialsSwiper">
-                    <div class="swiper-wrapper">
+      <!-- Carrossel de Depoimentos (Texto) -->
+      <div class="testimonials-carousel">
+        <div class="swiper testimonialsSwiper">
+          <div class="swiper-wrapper">
 
 
 
 
-                        <!-- Slides serão carregados dinamicamente de data/testimonials.json -->
-                    </div>
+            <!-- Slides serão carregados dinamicamente de data/testimonials.json -->
+          </div>
 
-                    <div class="testimonials-pagination swiper-pagination"></div>
-                    <div class="testimonials-button-next swiper-button-next"></div>
-                    <div class="testimonials-button-prev swiper-button-prev"></div>
+          <div class="testimonials-pagination swiper-pagination"></div>
+          <div class="testimonials-button-next swiper-button-next"></div>
+          <div class="testimonials-button-prev swiper-button-prev"></div>
+        </div>
       </div>
-    </div>
   </section>
 
   <!-- Seção Contato -->
@@ -1871,28 +1912,45 @@
     <div class="contato-grid">
       <div class="contato-card">
         <div class="contato-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.116-4.922 5.636-4.922 9.399 0 5.309 4.306 9.628 9.824 9.628a9.8 9.8 0 004.288-.996l6.063 1.587-.424-5.994c.956-1.686 1.515-3.62 1.515-5.59C22 6.045 16.997 0 10.822 0c-.568 0-1.12.044-1.669.13C4.998.645 0 4.812 0 10.001c0 3.763 1.867 7.283 4.922 9.399" /></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.116-4.922 5.636-4.922 9.399 0 5.309 4.306 9.628 9.824 9.628a9.8 9.8 0 004.288-.996l6.063 1.587-.424-5.994c.956-1.686 1.515-3.62 1.515-5.59C22 6.045 16.997 0 10.822 0c-.568 0-1.12.044-1.669.13C4.998.645 0 4.812 0 10.001c0 3.763 1.867 7.283 4.922 9.399" />
+          </svg>
         </div>
         <h3>WhatsApp</h3>
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+          onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
       </div>
       <div class="contato-card">
         <div class="contato-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
         </div>
         <h3>E-mail</h3>
         <a href="mailto:karina_c_sanchez@hotmail.com">karina_c_sanchez@hotmail.com</a>
       </div>
       <div class="contato-card">
         <div class="contato-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M17.707 12.293l-5.293-5.293a1 1 0 00-1.414 1.414L15.586 12l-4.586 4.586a1 1 0 101.414 1.414l5.293-5.293a1 1 0 000-1.414zM6.707 12.293l5.293-5.293a1 1 0 011.414 1.414L8.414 12l4.586 4.586a1 1 0 11-1.414 1.414l-5.293-5.293a1 1 0 010-1.414z" transform="rotate(90 12 12)" style="transform: rotate(90deg);"/><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14h-2v2h-8v-2H6v-8h12v8z" /></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path
+              d="M17.707 12.293l-5.293-5.293a1 1 0 00-1.414 1.414L15.586 12l-4.586 4.586a1 1 0 101.414 1.414l5.293-5.293a1 1 0 000-1.414zM6.707 12.293l5.293-5.293a1 1 0 011.414 1.414L8.414 12l4.586 4.586a1 1 0 11-1.414 1.414l-5.293-5.293a1 1 0 010-1.414z"
+              transform="rotate(90 12 12)" style="transform: rotate(90deg);" />
+            <path
+              d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14h-2v2h-8v-2H6v-8h12v8z" />
+          </svg>
         </div>
         <h3>Telefone</h3>
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank" onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank"
+          onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
       </div>
       <div class="contato-card">
         <div class="contato-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1012 17a4.5 4.5 0 010-9zm5.5-3a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path
+              d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1012 17a4.5 4.5 0 010-9zm5.5-3a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z" />
+          </svg>
         </div>
         <h3>Instagram</h3>
         <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">@karinacastrosanchez</a>
@@ -1910,7 +1968,8 @@
       </div>
       <div class="footer-section">
         <h3>Contatos</h3>
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank" onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank"
+          onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
         <a href="mailto:karina_c_sanchez@hotmail.com">karina_c_sanchez@hotmail.com</a>
         <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">@karinacastrosanchez</a>
       </div>
@@ -1920,7 +1979,9 @@
         <p>Centro - Santa Maria/RS</p>
         <p>CEP: 97010-004</p>
         <div class="footer-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.173835825476!2d-53.81569472446253!3d-29.686338975091434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cbf9f1f1f1f1%3A0x1234567890abcdef!2sR.%20Ven%C3%A2ncio%20Aires%2C%202050%20-%20Sala%20403%20-%20Centro%2C%20Santa%20Maria%20-%20RS%2C%2097010-004!5e0!3m2!1spt-BR!2sbr!4v1234567890123" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.173835825476!2d-53.81569472446253!3d-29.686338975091434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cbf9f1f1f1f1%3A0x1234567890abcdef!2sR.%20Ven%C3%A2ncio%20Aires%2C%202050%20-%20Sala%20403%20-%20Centro%2C%20Santa%20Maria%20-%20RS%2C%2097010-004!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -1931,7 +1992,8 @@
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" onclick="return gtag_report_conversion(this.href)" title="WhatsApp">
+  <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float"
+    target="_blank" onclick="return gtag_report_conversion(this.href)" title="WhatsApp">
   </a>
 
   <!-- Swiper JS -->
@@ -1942,7 +2004,7 @@
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
-        if (typeof(url) != 'undefined') {
+        if (typeof (url) != 'undefined') {
           window.location = url;
         }
       };
@@ -1954,4 +2016,5 @@
     }
   </script>
 </body>
+
 </html>
