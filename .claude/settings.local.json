@@ -8,7 +8,13 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git push *)",
-      "Bash(git pull *)"
+      "Bash(git pull *)",
+      "Bash(python -m http.server 8000)",
+      "Bash(dir /s /B)",
+      "PowerShell(head *)",
+      "PowerShell(node --version 2>&1)",
+      "Bash(curl -s http://localhost:8000)",
+      "Bash(git config *)"
     ]
   }
 }
