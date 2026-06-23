@@ -315,19 +315,48 @@
       width: 100%;
       padding: 0 5%;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 4rem;
       align-items: center;
     }
 
     .hero-text {
       color: var(--white);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-text .hero-subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin: 0 0 2rem 0;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.75);
     }
 
     .hero-text h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
+      font-size: 4.5rem;
+      margin: 1.5rem 0 1.5rem 0;
+      line-height: 1.15;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      display: block;
+      width: 100%;
+    }
+
+    .hero-text .hero-description {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      line-height: 1.6;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .hero-text .highlight {
@@ -335,76 +364,10 @@
     }
 
     .hero-text p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      line-height: 1.8;
+      display: none;
     }
 
-    /* Formulário Hero */
-    .hero-form-card {
-      background: var(--white);
-      padding: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    }
-
-    .hero-form-card h3 {
-      color: var(--dark-color);
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--text-dark);
-      font-weight: 500;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #e0e0e0;
-      border-radius: 10px;
-      font-size: 16px; /* Mínimo 16px para prevenir zoom automático no iOS */
-      transition: border-color 0.3s;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 100px;
-      line-height: 1.6;
-    }
-
-    .submit-button {
-      width: 100%;
-      background: var(--primary-color);
-      color: var(--white);
-      padding: 15px;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .submit-button:hover {
-      background: var(--secondary-color);
-    }
+    /* Formulário Hero - Removido */
 
     /* Seção Quem Somos */
     .quem-somos {
@@ -636,9 +599,36 @@
     }
 
     .servico-card h3 {
-      padding: 1.5rem;
+      padding: 1.5rem 1.5rem 0.75rem;
       color: var(--dark-color);
       font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    .servico-card p {
+      padding: 0 1.5rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .servico-card .servico-btn {
+      display: inline-block;
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0 1.5rem 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .servico-card .servico-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
     }
 
     /* Seção FAQ e Depoimentos */
@@ -665,20 +655,39 @@
       margin-bottom: 4rem;
     }
 
-        /* Depoimentos - Carousel de Feedbacks (sem imagens) */
+        /* Depoimentos - Grid Estática */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .testimonial-card {
             background: var(--white);
             padding: 2rem;
             border-radius: 14px;
-            max-width: 700px;
-            margin: 0 auto;
             text-align: center;
-            min-height: 220px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             color: var(--text-dark);
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
         }
 
         .testimonial-quote {
@@ -736,6 +745,18 @@
         .testimonial-author small {
             color: #ccc;
             display: block;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
         }
       overflow: hidden;
     }
@@ -925,40 +946,46 @@
     }
 
     .hero-cta-float {
-      grid-column: 1 / -1;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 1rem;
+      flex-direction: column;
+      gap: 2rem;
+      padding-top: 2rem;
       position: relative;
       z-index: 2;
+      width: 100%;
     }
 
     .hero-cta-float a {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      background: #25a244;
-      color: var(--white);
-      font-size: 1.5rem;
-      font-weight: 700;
-      padding: 22px 60px;
-      border-radius: 50px;
+      justify-content: center;
+      background: var(--white);
+      color: var(--dark-color);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 16px 45px;
+      border-radius: 4px;
       text-decoration: none;
-      letter-spacing: 0.5px;
-      animation: pulse-btn 2s ease-in-out infinite;
-      transition: background 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
 
     .hero-cta-float a:hover {
-      background: #1e8a38;
-      animation-play-state: paused;
+      background: var(--primary-color);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
     }
+
 
     @media (max-width: 768px) {
       .hero-cta-float a {
-        font-size: 1.15rem;
-        padding: 18px 36px;
+        font-size: 0.85rem;
+        padding: 14px 36px;
       }
     }
 
@@ -967,23 +994,50 @@
       position: fixed;
       bottom: 30px;
       right: 30px;
-      width: 60px;
-      height: 60px;
       background: #25D366;
-      border-radius: 50%;
+      border-radius: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      gap: 0.6rem;
+      padding: 14px 20px;
+      height: 60px;
       color: var(--white);
       box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
       z-index: 999;
       text-decoration: none;
       transition: all 0.3s;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .whatsapp-float span {
+      display: none;
+      font-size: 13px;
+      font-weight: normal;
+      color: var(--white);
+    }
+
+    .whatsapp-float-icon {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+      .whatsapp-float span {
+        display: inline;
+      }
+
+      .whatsapp-float {
+        width: auto;
+        padding: 14px 20px;
+      }
     }
 
     .whatsapp-float:hover {
-      transform: scale(1.1);
+      transform: scale(1.08);
     }
 
     /* Melhora performance com will-change em elementos animados */
@@ -1040,20 +1094,17 @@
         gap: 8px;
       }
       
-      /* Oculta vídeo no mobile para economizar dados e melhorar performance */
-      .hero-media { 
-        display: none; 
+      /* Vídeo também em mobile */
+      .hero-media {
+        display: block;
       }
-      
-      .hero-video-toggle { 
-        display: none; 
+
+      .hero-video-toggle {
+        display: block;
       }
-      
-      .hero-video { 
-        background: 
-          linear-gradient(135deg, rgba(44, 44, 44, 0.85) 0%, rgba(139, 111, 71, 0.85) 100%),
-          url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&auto=format&fit=crop&q=80') center/cover no-repeat;
-        min-height: 90vh;
+
+      .hero-video {
+        min-height: 80vh;
         height: auto;
       }
 
@@ -1134,46 +1185,29 @@
       }
 
       .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
         padding: 2rem 5%;
       }
 
-      .hero-text {
-        text-align: center;
-      }
-
       .hero-text h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
+        font-size: 2.5rem;
+        line-height: 1.2;
       }
 
-      .hero-text p {
-        font-size: 1rem;
+      .hero-text .hero-subtitle {
+        font-size: 0.85rem;
         margin-bottom: 1.5rem;
       }
 
-      .hero-form-card {
-        padding: 1.5rem;
-        border-radius: 15px;
-        max-width: 500px;
-        margin: 0 auto;
+      .hero-text .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
       }
 
-      .hero-form-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+      .hero-cta-float a {
+        font-size: 0.85rem;
+        padding: 14px 36px;
       }
 
-      .form-group {
-        margin-bottom: 1rem;
-      }
-
-      .form-group input,
-      .form-group textarea {
-        padding: 10px;
-        font-size: 0.95rem;
-      }
 
       /* Seção Quem Somos Mobile */
       .quem-somos {
@@ -1302,19 +1336,15 @@
     /* Mobile pequeno (iPhone SE, etc) */
     @media (max-width: 400px) {
       .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
 
-      .hero-text p {
-        font-size: 0.9rem;
+      .hero-text .hero-subtitle {
+        font-size: 0.75rem;
       }
 
-      .hero-form-card {
-        padding: 1.2rem;
-      }
-
-      .hero-form-card h3 {
-        font-size: 1.2rem;
+      .hero-text .hero-description {
+        font-size: 1rem;
       }
 
       .section-title,
@@ -1444,38 +1474,13 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">
-        <h1>Transformando <span class="highlight">Sorrisos</span> e Promovendo <span class="highlight">Autoestima</span></h1>
-        <p><strong>Especialista em Ortodontia e Clínica Geral com Botox e Invisalign.</strong></p>
-        <p>Recupere seu sorriso com segurança, conforto e rapidez na clínica Dra. Karina C. Sanchez.</p>
-        <p>Somos especialistas em ortodontia em Santa Maria (RS), com soluções avançadas como Invisalign e harmonização facial.</p>
-      </div>
-      <div class="hero-form-card" id="agendar">
-        <h3>Agende a sua consulta hoje mesmo!</h3>
-        <form id="agendamentoForm">
-          <div class="form-group">
-            <label for="nome">Nome Completo *</label>
-            <input type="text" id="nome" name="nome" placeholder="Ex: Maria da Silva" required>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-          </div>
-          <div class="form-group">
-            <label for="telefone">Telefone/WhatsApp *</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(55) 99999-9999" required>
-          </div>
-          <div class="form-group">
-            <label for="caso">Descreva seu caso</label>
-            <textarea id="caso" name="caso" rows="4" placeholder="Ex: Gostaria de fazer clareamento dental, tenho interesse em Invisalign, preciso de uma avaliação ortodôntica..." style="resize: vertical; min-height: 100px;"></textarea>
-          </div>
-          <button type="submit" class="submit-button" id="submitBtn">
-            Agendar consulta
-          </button>
-        </form>
+        <p class="hero-subtitle">Bem-vindo à clínica especializada</p>
+        <h1>Dra. Karina <span class="highlight">C. Sanchez</span></h1>
+        <p class="hero-description">Ortodontia & Estética</p>
       </div>
       <div class="hero-cta-float">
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" onclick="return gtag_report_conversion(this.href)">
-          Agende uma consulta
+        <a href="https://wa.me/5555996147772?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20[LP]" target="_blank" onclick="return gtag_report_conversion(this.href)">
+          Agendar Avaliação
         </a>
       </div>
     </div>
@@ -1528,79 +1533,93 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
+              <img
                 src="images/servicos/clareamento-consultorio-1200.jpg"
                 srcset="images/servicos/clareamento-consultorio-480.jpg 480w, images/servicos/clareamento-consultorio-800.jpg 800w, images/servicos/clareamento-consultorio-1200.jpg 1200w"
                 sizes="(max-width: 768px) 90vw, 600px"
                 alt="Clareamento dental no consultório"
                 loading="lazy">
-              <h3>Clareamento Dental - No Consultório</h3>
+              <h3>Clareamento Dental</h3>
+              <p>Moldeiras caseiras supervisionadas. Resultados naturais e duradouros.</p>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20clareamento%20dental%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
+              <img
                 src="images/servicos/clareamento-caseiro-1200.jpg"
                 srcset="images/servicos/clareamento-caseiro-480.jpg 480w, images/servicos/clareamento-caseiro-800.jpg 800w, images/servicos/clareamento-caseiro-1200.jpg 1200w"
                 sizes="(max-width: 768px) 90vw, 600px"
                 alt="Clareamento dental caseiro"
                 loading="lazy">
-              <h3>Clareamento Dental Caseiro</h3>
+              <h3>Limpeza Dental</h3>
+              <p>Profilaxia profissional com tecnologia. Elimina tártaro e placa.</p>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20limpeza%20dental%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
+              <img
                 src="images/servicos/invisalign-1200.jpg"
                 srcset="images/servicos/invisalign-480.jpg 480w, images/servicos/invisalign-800.jpg 800w, images/servicos/invisalign-1200.jpg 1200w"
                 sizes="(max-width: 768px) 90vw, 600px"
                 alt="Alinhadores transparentes Invisalign"
                 loading="lazy">
               <h3>Invisalign</h3>
+              <p>Aparelho estético e discreto. Alinhamento sem comprometer estética.</p>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20Invisalign%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
+              <img
                 src="images/servicos/botox-harmonizacao-1200.jpg"
                 srcset="images/servicos/botox-harmonizacao-480.jpg 480w, images/servicos/botox-harmonizacao-800.jpg 800w, images/servicos/botox-harmonizacao-1200.jpg 1200w"
                 sizes="(max-width: 768px) 90vw, 600px"
                 alt="Botox e harmonização facial"
                 loading="lazy">
-              <h3>Botox e Harmonização</h3>
+              <h3>Harmonização Orofacial</h3>
+              <p>Resultados naturais e equilibrados. Realça sua beleza única.</p>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20harmonização%20orofacial%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
+              <img
                 src="images/servicos/clinica-geral-1200.jpg"
                 srcset="images/servicos/clinica-geral-480.jpg 480w, images/servicos/clinica-geral-800.jpg 800w, images/servicos/clinica-geral-1200.jpg 1200w"
                 sizes="(max-width: 768px) 90vw, 600px"
                 alt="Atendimentos de clínica geral"
                 loading="lazy">
-              <h3>Clínica Geral</h3>
+              <h3>Restauração</h3>
+              <p>Resina composta de alta qualidade. Devolve função e estética.</p>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20restauração%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
+              <img
                 src="images/servicos/limpeza-prevencao-1200.jpg"
                 srcset="images/servicos/limpeza-prevencao-480.jpg 480w, images/servicos/limpeza-prevencao-800.jpg 800w, images/servicos/limpeza-prevencao-1200.jpg 1200w"
                 sizes="(max-width: 768px) 90vw, 600px"
                 alt="Limpeza dental e prevenção"
                 loading="lazy">
-              <h3>Limpeza e Prevenção</h3>
+              <h3>Ortodontia</h3>
+              <p>Aparelho convencional com tecnologia. Corrige o alinhamento dental.</p>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20ortodontia%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img 
+              <img
                 src="images/servicos/ortodontia-1200.jpg"
                 srcset="images/servicos/ortodontia-480.jpg 480w, images/servicos/ortodontia-800.jpg 800w, images/servicos/ortodontia-1200.jpg 1200w"
                 sizes="(max-width: 768px) 90vw, 600px"
                 alt="Tratamentos ortodônticos"
                 loading="lazy">
-              <h3>Ortodontia</h3>
+              <h3>Avaliação Gratuita</h3>
+              <p>Consulta inicial sem compromisso. Conheça suas opções de tratamento.</p>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20fazer%20uma%20avaliação%20gratuita%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
         </div>
@@ -1616,22 +1635,41 @@
     <div class="faq-depoimentos-grid">
       <h2 class="section-title-white">Perguntas Frequentes & Depoimentos</h2>
 
-            <!-- Carrossel de Depoimentos (Texto) -->
-            <div class="testimonials-carousel">
-                <div class="swiper testimonialsSwiper">
-                    <div class="swiper-wrapper">
+            <!-- Depoimentos - Cards Estáticos -->
+            <div class="testimonials-grid">
+              <div class="testimonial-card">
+                <div class="testimonial-avatar">E</div>
+                <p class="testimonial-quote">Achei uma baita diferença já! A Dra. Karina é muito atenciosa e o resultado do clareamento superou minhas expectativas.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-meta">
+                  <div class="testimonial-author">
+                    <strong>Eduarda Acosta</strong>
+                  </div>
+                </div>
+              </div>
 
+              <div class="testimonial-card">
+                <div class="testimonial-avatar">M</div>
+                <p class="testimonial-quote">Atendimento excelente, muito profissional. Recomendo para quem busca qualidade e atenção em Santa Maria.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-meta">
+                  <div class="testimonial-author">
+                    <strong>Maurício Reis</strong>
+                  </div>
+                </div>
+              </div>
 
-
-
-                        <!-- Slides serão carregados dinamicamente de data/testimonials.json -->
-                    </div>
-
-                    <div class="testimonials-pagination swiper-pagination"></div>
-                    <div class="testimonials-button-next swiper-button-next"></div>
-                    <div class="testimonials-button-prev swiper-button-prev"></div>
-      </div>
-    </div>
+              <div class="testimonial-card">
+                <div class="testimonial-avatar">M</div>
+                <p class="testimonial-quote">Consultório muito bem localizado, ambiente agradável e atendimento humanizado. Já indiquei para toda a família.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-meta">
+                  <div class="testimonial-author">
+                    <strong>Maria F.</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
   </section>
 
   <!-- Seção Contato -->
@@ -1681,19 +1719,19 @@
         <p>Centro - Santa Maria/RS</p>
         <p>CEP: 97010-004</p>
         <div class="footer-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.173835825476!2d-53.81569472446253!3d-29.686338975091434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cbf9f1f1f1f1%3A0x1234567890abcdef!2sR.%20Ven%C3%A2ncio%20Aires%2C%202050%20-%20Sala%20403%20-%20Centro%2C%20Santa%20Maria%20-%20RS%2C%2097010-004!5e0!3m2!1spt-BR!2sbr!4v1234567890123" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.2!2d-53.81095!3d-29.68376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949ca8cc1a1a1a1a%3A0x1234567890abcdef!2sR.%20Ven%C3%A2ncio%20Aires%2C%202050%20-%20Sala%20403%2C%20Centro%2C%20Santa%20Maria%20-%20RS%2C%2097010-004!5e0!3m2!1spt-BR!2sbr!4v1720000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2024 Dra. Karina C. Sanchez - Todos os direitos reservados</p>
-      <p>Desenvolvido por Kronos Assessoria</p>
     </div>
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" onclick="return gtag_report_conversion(this.href)">
-    💬
+  <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" onclick="return gtag_report_conversion(this.href)" title="Fale conosco via WhatsApp">
+    <span class="whatsapp-float-icon">💬</span>
+    <span>Agendar consulta</span>
   </a>
 
   <!-- Swiper JS -->
