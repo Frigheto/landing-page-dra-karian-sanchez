@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#d4a574">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://googleads.g.doubleclick.net https://www.googleadservices.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.googletagmanager.com https://www.google.com https://www.google.com.br https://*.google-analytics.com https://googleads.g.doubleclick.net https://*.doubleclick.net; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://www.google.com.br https://www.googleadservices.com https://*.doubleclick.net; frame-src https://www.google.com; media-src 'self';">
   <title>Dra. Karina C. Sanchez - Ortodontia e Estética</title>
-  <meta name="description" content="Transformando sorrisos e promovendo autoestima. Especialista em Ortodontia, Clínica Geral, Botox e Invisalign em Santa Maria/RS.">
-  
+  <meta name="description"
+    content="Transformando sorrisos e promovendo autoestima. Especialista em Ortodontia, Clínica Geral, Botox e Invisalign em Santa Maria/RS.">
+
   <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18057099220"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'AW-18057099220');
   </script>
 
   <!-- Preconnect para melhorar performance -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://images.unsplash.com">
   <link rel="dns-prefetch" href="https://www.google.com">
-  
+
+  <!-- Google Fonts - Tipografia elegante -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
+
   <!-- Swiper CSS com media para carregamento otimizado -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'; this.onload=null;">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+    onload="this.media='all'; this.onload=null;">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  </noscript>
   <style>
     * {
       margin: 0;
@@ -35,10 +49,16 @@
       --primary-color: #d4a574;
       --secondary-color: #8b6f47;
       --dark-color: #2c2c2c;
-      --light-color: #f8f8f8;
-      --white: #ffffff;
+      --light-color: #f7f5f2;
+      --white: #fdfcfa;
+      --bg-cream: #faf8f5;
       --text-dark: #333333;
-      --text-light: #666666;
+      --text-light: #5a5a5a;
+
+      /* Tipografia */
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-elegant: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
 
     html {
@@ -50,9 +70,10 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
+      font-family: var(--font-sans);
+      line-height: 1.7;
       color: var(--text-dark);
+      background-color: var(--bg-cream);
       overflow-x: hidden;
       width: 100%;
       max-width: 100vw;
@@ -64,7 +85,8 @@
       max-width: 100%;
     }
 
-    img, video {
+    img,
+    video {
       max-width: 100%;
       height: auto;
       display: block;
@@ -99,7 +121,7 @@
       position: sticky;
       top: 0;
       background: var(--white);
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
       z-index: 1000;
     }
 
@@ -114,11 +136,13 @@
     }
 
     .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
+      font-family: var(--font-elegant);
+      font-size: 1.7rem;
+      font-weight: 600;
       color: var(--primary-color);
       white-space: nowrap;
-      letter-spacing: -0.5px;
+      letter-spacing: 0.5px;
+      font-style: italic;
     }
 
     .nav-links {
@@ -177,7 +201,8 @@
       white-space: nowrap;
       box-shadow: 0 2px 10px rgba(212, 165, 116, 0.25);
       display: inline-block;
-      min-height: 44px; /* Tamanho mínimo recomendado para touch targets */
+      min-height: 44px;
+      /* Tamanho mínimo recomendado para touch targets */
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -205,7 +230,7 @@
       justify-content: center;
       border-radius: 10px;
       background: transparent;
-      border: 1px solid rgba(44,44,44,0.06);
+      border: 1px solid rgba(44, 44, 44, 0.06);
       color: var(--primary-color);
       text-decoration: none;
       transition: all 0.22s ease;
@@ -264,8 +289,10 @@
       position: absolute;
       inset: 0;
       overflow: hidden;
-      z-index: -2; /* behind overlay */
-      background: #000; /* fallback color */
+      z-index: -2;
+      /* behind overlay */
+      background: #000;
+      /* fallback color */
     }
 
     .hero-media video {
@@ -286,17 +313,29 @@
       top: 18px;
       right: 18px;
       z-index: 2;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255, 255, 255, 0.95);
       border: none;
-      padding: 8px 10px;
-      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
       cursor: pointer;
-      font-weight: 600;
-      transition: transform .15s;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      transition: transform .15s, background 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark-color);
     }
 
-    .hero-video-toggle:hover { transform: scale(1.04); }
+    .hero-video-toggle svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero-video-toggle:hover {
+      transform: scale(1.04);
+    }
 
     .hero-overlay {
       position: absolute;
@@ -333,30 +372,35 @@
     }
 
     .hero-text .hero-subtitle {
-      font-size: 0.9rem;
-      letter-spacing: 2.5px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin: 0 0 2rem 0;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.75);
+      margin: 0 0 1.5rem 0;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
     }
 
     .hero-text h1 {
-      font-size: 4.5rem;
-      margin: 1.5rem 0 1.5rem 0;
-      line-height: 1.15;
-      font-weight: 300;
-      letter-spacing: 0.5px;
+      font-family: var(--font-elegant);
+      font-size: 5rem;
+      margin: 1rem 0 1.2rem 0;
+      line-height: 1.1;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 1px;
       display: block;
       width: 100%;
     }
 
     .hero-text .hero-description {
-      font-size: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
       margin-bottom: 3rem;
-      line-height: 1.6;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.5;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.95);
     }
 
     .hero-text .highlight {
@@ -385,7 +429,8 @@
       max-width: 1400px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 4fr 3fr; /* foto ainda menor */
+      grid-template-columns: 4fr 3fr;
+      /* foto ainda menor */
       gap: 3rem;
       align-items: center;
     }
@@ -398,7 +443,7 @@
       width: 100%;
       height: auto;
       border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
       object-fit: cover;
     }
 
@@ -409,7 +454,9 @@
     }
 
     .sobre-karina .sobre-text h2 {
-      font-size: 2rem;
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 500;
       color: var(--dark-color);
       margin-bottom: 1rem;
     }
@@ -430,7 +477,9 @@
     }
 
     .quem-somos h2 {
+      font-family: var(--font-display);
       font-size: 2.5rem;
+      font-weight: 500;
       color: var(--dark-color);
       margin-bottom: 2rem;
     }
@@ -444,9 +493,13 @@
     }
 
     .quem-somos-text h4 {
+      font-family: var(--font-elegant);
       color: var(--primary-color);
       margin-bottom: 1rem;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: 0.5px;
     }
 
     .quem-somos-text p {
@@ -498,7 +551,7 @@
       max-height: 360px;
       object-fit: cover;
       border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
       transition: transform .35s ease;
     }
 
@@ -533,19 +586,21 @@
         max-height: 280px;
       }
     }
+
     .swiper-button-next,
     .swiper-button-prev {
       color: var(--primary-color);
     }
 
     @media (max-width: 768px) {
+
       .swiper-button-next,
       .swiper-button-prev {
         width: 35px;
         height: 35px;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 50%;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
       }
 
       .swiper-button-next::after,
@@ -567,10 +622,13 @@
     }
 
     .section-title {
+      font-family: var(--font-display);
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 500;
       color: var(--dark-color);
       margin-bottom: 3rem;
+      letter-spacing: 0.5px;
     }
 
     .servicos-carousel {
@@ -599,10 +657,13 @@
     }
 
     .servico-card h3 {
+      font-family: var(--font-display);
       padding: 1.5rem 1.5rem 0.75rem;
       color: var(--dark-color);
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 500;
       margin-bottom: 0;
+      letter-spacing: 0.3px;
     }
 
     .servico-card p {
@@ -644,10 +705,13 @@
     }
 
     .section-title-white {
+      font-family: var(--font-display);
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 500;
       color: var(--white);
       margin-bottom: 3rem;
+      letter-spacing: 0.5px;
     }
 
     /* Vídeos FAQ */
@@ -655,110 +719,113 @@
       margin-bottom: 4rem;
     }
 
-        /* Depoimentos - Grid Estática */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    /* Depoimentos - Grid Estática */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .testimonial-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 14px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            color: var(--text-dark);
-        }
+    .testimonial-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      color: var(--text-dark);
+    }
 
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin: 0 auto 1rem;
-        }
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 0 auto 1rem;
+    }
 
-        .testimonial-quote {
-            font-size: 1rem;
-            color: var(--text-dark);
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
-            max-height: 6.6rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .testimonial-response {
-            font-size: 0.95rem;
-            color: var(--secondary-color);
-            margin-top: 0.6rem;
-            background: rgba(212,165,116,0.06);
-            padding: 0.6rem 0.9rem;
-            border-radius: 8px;
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .read-more {
-            background: transparent;
-            border: none;
-            color: var(--primary-color);
-            font-weight: 600;
-            cursor: pointer;
-            padding: 0;
-            margin-bottom: 0.6rem;
-        }
-
-        .read-more:focus { outline: 2px solid rgba(212,165,116,0.18); border-radius: 6px; }
-
-        .testimonial-meta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-top: 0.5rem;
-        }
-
-        .testimonial-author {
-            color: #ddd;
-            text-align: center;
-        }
-
-        .testimonial-author strong {
-            color: var(--primary-color);
-            display: block;
-        }
-
-        .testimonial-author small {
-            color: #ccc;
-            display: block;
-        }
-
-        @media (max-width: 1024px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    .testimonial-quote {
+      font-size: 1rem;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+      max-height: 6.6rem;
       overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .testimonial-response {
+      font-size: 0.95rem;
+      color: var(--secondary-color);
+      margin-top: 0.6rem;
+      background: rgba(212, 165, 116, 0.06);
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .read-more {
+      background: transparent;
+      border: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 0.6rem;
+    }
+
+    .read-more:focus {
+      outline: 2px solid rgba(212, 165, 116, 0.18);
+      border-radius: 6px;
+    }
+
+    .testimonial-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .testimonial-author {
+      color: #ddd;
+      text-align: center;
+    }
+
+    .testimonial-author strong {
+      color: var(--primary-color);
+      display: block;
+    }
+
+    .testimonial-author small {
+      color: #ccc;
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+      }
     }
 
     .video-item video {
@@ -773,7 +840,7 @@
       bottom: 20px;
       left: 20px;
       right: 20px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       padding: 1rem;
       border-radius: 10px;
       font-size: 1.3rem;
@@ -786,7 +853,7 @@
     }
 
     .depoimento-item {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       margin-bottom: 1rem;
       border-radius: 10px;
       overflow: hidden;
@@ -802,7 +869,7 @@
     }
 
     .depoimento-header:hover {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255, 255, 255, 0.15);
     }
 
     .depoimento-content {
@@ -825,7 +892,10 @@
 
     .stars {
       color: var(--primary-color);
-      font-size: 1.2rem;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      font-weight: 300;
+      opacity: 0.9;
     }
 
     /* Seção Contato */
@@ -865,9 +935,14 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 1rem;
-      font-size: 1.5rem;
       color: var(--white);
       transition: all 0.3s;
+    }
+
+    .contato-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
     }
 
     .contato-card:hover .contato-icon {
@@ -876,12 +951,17 @@
     }
 
     .contato-card h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
       margin-bottom: 0.5rem;
+      letter-spacing: 0.3px;
     }
 
     .contato-card a {
       color: inherit;
       text-decoration: none;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
 
     /* Footer */
@@ -901,8 +981,11 @@
     }
 
     .footer-section h3 {
+      font-family: var(--font-display);
       color: var(--primary-color);
+      font-weight: 500;
       margin-bottom: 1rem;
+      letter-spacing: 0.3px;
     }
 
     .footer-section p,
@@ -920,7 +1003,7 @@
     .footer-bottom {
       text-align: center;
       padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       color: #999;
     }
 
@@ -940,9 +1023,20 @@
 
     /* Botão Flutuante Agende uma Consulta */
     @keyframes pulse-btn {
-      0%   { box-shadow: 0 0 0 0 rgba(37, 162, 68, 0.7), 0 8px 30px rgba(37,162,68,0.4); transform: translateY(0) scale(1); }
-      50%  { box-shadow: 0 0 0 18px rgba(37, 162, 68, 0), 0 12px 40px rgba(37,162,68,0.5); transform: translateY(-5px) scale(1.03); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 162, 68, 0), 0 8px 30px rgba(37,162,68,0.4); transform: translateY(0) scale(1); }
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 162, 68, 0.7), 0 8px 30px rgba(37, 162, 68, 0.4);
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        box-shadow: 0 0 0 18px rgba(37, 162, 68, 0), 0 12px 40px rgba(37, 162, 68, 0.5);
+        transform: translateY(-5px) scale(1.03);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 162, 68, 0), 0 8px 30px rgba(37, 162, 68, 0.4);
+        transform: translateY(0) scale(1);
+      }
     }
 
     .hero-cta-float {
@@ -1019,10 +1113,15 @@
     }
 
     .whatsapp-float-icon {
-      font-size: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .whatsapp-float-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
     }
 
     @media (min-width: 768px) {
@@ -1093,7 +1192,7 @@
         flex-wrap: wrap;
         gap: 8px;
       }
-      
+
       /* Vídeo também em mobile */
       .hero-media {
         display: block;
@@ -1111,6 +1210,12 @@
       .header-top a {
         margin: 0 8px;
         font-size: 0.75rem;
+        word-break: break-word;
+        text-align: center;
+      }
+
+      .header-top {
+        padding: 10px 15px;
       }
 
       nav {
@@ -1136,7 +1241,7 @@
         flex-direction: column;
         padding: 2rem;
         transition: left 0.3s;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         justify-content: flex-start;
         gap: 0;
         z-index: 999;
@@ -1272,6 +1377,9 @@
       .section-title-white {
         font-size: 1.8rem;
         margin-bottom: 2rem;
+        padding: 0 1rem;
+        line-height: 1.3;
+        word-wrap: break-word;
       }
 
       .servico-card img {
@@ -1281,11 +1389,38 @@
       .servico-card h3 {
         font-size: 1.1rem;
         padding: 1rem;
+        line-height: 1.3;
+      }
+
+      .servico-card p {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
       }
 
       .swiper-slide img,
       .video-item video {
         max-height: 300px;
+      }
+
+      /* Carrossel de serviços - 1 card por vez no mobile */
+      .servicosSwiper .swiper-slide {
+        width: 90%;
+        max-width: 340px;
+      }
+
+      .servicosSwiper {
+        padding: 0 15px;
+      }
+
+      .servico-card {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .servico-card img {
+        height: 200px;
+        object-fit: cover;
       }
 
       .contato-grid {
@@ -1309,6 +1444,7 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
+        padding: 0 1rem;
       }
 
       .footer-section h3 {
@@ -1318,6 +1454,12 @@
       .footer-section p,
       .footer-section a {
         font-size: 0.9rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .footer-map iframe {
+        height: 250px;
       }
 
       .whatsapp-float {
@@ -1360,8 +1502,455 @@
         padding: 0.8rem 3%;
       }
     }
+
+    /* ========================================
+       CORREÇÕES DE RESPONSIVIDADE MOBILE
+       ======================================== */
+
+    @media (max-width: 768px) {
+
+      /* Corrigir textos cortados nos depoimentos */
+      .testimonial-quote {
+        max-height: none;
+        overflow: visible;
+        text-overflow: unset;
+      }
+
+      .testimonial-card {
+        padding: 1.5rem;
+      }
+
+      .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+
+      /* Cards de serviço - 1 card por vez, bem centralizado */
+      .servico-card {
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      .servico-card p {
+        padding: 0 1.2rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+      }
+
+      .servico-card h3 {
+        font-size: 1.2rem;
+        padding: 1.2rem 1rem 0.5rem;
+      }
+
+      .servico-card .servico-btn {
+        margin: 0 1.2rem 1.5rem;
+        padding: 12px 28px;
+        font-size: 0.95rem;
+        width: calc(100% - 2.4rem);
+        text-align: center;
+      }
+
+      /* Ajustar ondas para não ocupar muito espaço */
+      .section-wave {
+        margin-top: 0;
+      }
+
+      .quem-somos.section-wave,
+      .sobre-karina.section-wave {
+        padding-top: 100px;
+      }
+
+      .produtos-servicos.section-wave {
+        padding-top: 100px;
+      }
+
+      .faq-depoimentos.section-wave {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+
+      /* Melhorar legibilidade dos textos */
+      .quem-somos-text p,
+      .sobre-karina .sobre-text p {
+        line-height: 1.7;
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+
+      /* Cards de contato - garantir que texto não corte */
+      .contato-card {
+        min-height: auto;
+      }
+
+      .contato-card a {
+        word-break: break-word;
+        line-height: 1.4;
+      }
+
+      /* Footer - evitar overflow */
+      .footer-section {
+        word-wrap: break-word;
+      }
+
+      .footer-section a {
+        word-break: break-word;
+      }
+
+      /* Carrossel de serviços - slides mais espaçados */
+      .servicos-carousel {
+        padding: 0 10px;
+      }
+
+      /* Título da seção FAQ */
+      .section-title-white {
+        padding: 0 1rem;
+        line-height: 1.3;
+      }
+
+      /* Botão WhatsApp flutuante - não sobrepor conteúdo */
+      .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px;
+      }
+
+      /* Hero - melhor espaçamento */
+      .hero-text {
+        padding: 0 1rem;
+      }
+
+      .hero-cta-float {
+        padding-top: 1.5rem;
+      }
+
+      /* Imagem da Dra. Karina */
+      .sobre-karina .sobre-photo img {
+        max-height: 400px;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    /* Ajustes para telas muito pequenas */
+    @media (max-width: 360px) {
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-text .hero-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+      }
+
+      .hero-text .hero-description {
+        font-size: 0.95rem;
+      }
+
+      .section-title,
+      .section-title-white {
+        font-size: 1.4rem;
+        padding: 0 0.5rem;
+      }
+
+      .quem-somos-text h2,
+      .sobre-karina .sobre-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .quem-somos-text h4 {
+        font-size: 1rem;
+      }
+
+      .testimonial-card {
+        padding: 1.2rem;
+      }
+
+      .testimonial-quote {
+        font-size: 0.9rem;
+      }
+
+      .contato-card h3 {
+        font-size: 1.1rem;
+      }
+
+      .contato-card a {
+        font-size: 0.85rem;
+      }
+
+      .servico-card h3 {
+        font-size: 1rem;
+        padding: 0.8rem;
+      }
+
+      .servico-card p {
+        font-size: 0.85rem;
+      }
+
+      /* Botão CTA do hero */
+      .hero-cta-float a {
+        padding: 12px 28px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* ========================================
+       SCROLL REVEAL ANIMATIONS
+       ======================================== */
+
+    /* Estado inicial - elementos invisíveis */
+    .reveal {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Variações de animação */
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+    }
+
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+    }
+
+    .reveal-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+    }
+
+    .reveal-scale.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Stagger delay para elementos em sequência */
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    .reveal-delay-5 {
+      transition-delay: 0.5s;
+    }
+
+    /* ========================================
+       FORMAS ORGÂNICAS ENTRE SEÇÕES
+       ======================================== */
+
+    /* Wrapper para seções com transição */
+    .section-wave {
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Onda superior */
+    .wave-top {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .wave-top svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 80px;
+    }
+
+    .wave-top .shape-fill {
+      fill: var(--bg-cream);
+    }
+
+    /* Onda inferior */
+    .wave-bottom {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-bottom svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 80px;
+    }
+
+    .wave-bottom .shape-fill {
+      fill: var(--bg-cream);
+    }
+
+    /* Cores específicas para cada transição */
+    .wave-to-light .shape-fill {
+      fill: var(--light-color);
+    }
+
+    .wave-to-dark .shape-fill {
+      fill: var(--dark-color);
+    }
+
+    .wave-to-white .shape-fill {
+      fill: var(--white);
+    }
+
+    .wave-to-cream .shape-fill {
+      fill: var(--bg-cream);
+    }
+
+    /* Ajuste de padding para acomodar as ondas */
+    .section-wave {
+      position: relative;
+      margin-top: -1px;
+    }
+
+    .quem-somos.section-wave,
+    .sobre-karina.section-wave {
+      padding-top: 140px;
+    }
+
+    .produtos-servicos.section-wave {
+      padding-top: 140px;
+    }
+
+    .faq-depoimentos.section-wave {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+    .contato.section-wave {
+      padding-top: 60px;
+    }
+
+    /* ========================================
+       SMOOTH SCROLL APRIMORADO
+       ======================================== */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Animação suave no header ao scrollar */
+    header {
+      transition: all 0.4s ease;
+    }
+
+    header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+      background: rgba(253, 252, 250, 0.98);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Hover mais suave nos links de navegação */
+    .nav-links a {
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ========================================
+       EFEITOS ADICIONAIS
+       ======================================== */
+
+    /* Cards com hover mais suave */
+    .servico-card,
+    .contato-card,
+    .testimonial-card {
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* Imagens com zoom sutil no hover */
+    .servico-card img,
+    .sobre-karina .sobre-photo img {
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .servico-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .servico-card {
+      overflow: hidden;
+    }
+
+    /* Responsivo - reduzir animações em mobile para performance */
+    @media (max-width: 768px) {
+
+      .wave-top svg,
+      .wave-bottom svg {
+        height: 50px;
+      }
+
+      .section-wave {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .reveal,
+      .reveal-left,
+      .reveal-right,
+      .reveal-scale {
+        transition-duration: 0.6s;
+      }
+    }
+
+    /* Reduzir movimento para usuários que preferem */
+    @media (prefers-reduced-motion: reduce) {
+
+      .reveal,
+      .reveal-left,
+      .reveal-right,
+      .reveal-scale {
+        transition: opacity 0.3s ease;
+        transform: none;
+      }
+
+      .reveal.active,
+      .reveal-left.active,
+      .reveal-right.active,
+      .reveal-scale.active {
+        transform: none;
+      }
+    }
   </style>
-    <script type="application/ld+json">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Dentist",
@@ -1420,12 +2009,14 @@
     }
     </script>
 </head>
+
 <body>
   <!-- Header -->
   <div class="header-top">
-    <a href="mailto:karina_c_sanchez@hotmail.com">📧 karina_c_sanchez@hotmail.com</a>
-    <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" onclick="return gtag_report_conversion(this.href)">📱 (55) 99614-7772</a>
-    <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">📸 @karinacastrosanchez</a>
+    <a href="mailto:karina_c_sanchez@hotmail.com">karina_c_sanchez@hotmail.com</a>
+    <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+      onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+    <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">@karinacastrosanchez</a>
   </div>
 
   <header>
@@ -1440,18 +2031,31 @@
       </ul>
 
       <div class="contact-links" aria-hidden="false">
-        <a class="contact-link" href="mailto:karina_c_sanchez@hotmail.com" title="Enviar e-mail" aria-label="Enviar e-mail">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+        <a class="contact-link" href="mailto:karina_c_sanchez@hotmail.com" title="Enviar e-mail"
+          aria-label="Enviar e-mail">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z" />
+          </svg>
         </a>
-        <a class="contact-link" href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" title="WhatsApp" aria-label="WhatsApp" onclick="return gtag_report_conversion(this.href)">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.65.74 3.85a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+        <a class="contact-link" href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta"
+          target="_blank" title="WhatsApp" aria-label="WhatsApp" onclick="return gtag_report_conversion(this.href)">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.74 3.85.74a1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.65.74 3.85a1 1 0 01-.21 1.11l-2.2 2.2z" />
+          </svg>
         </a>
-        <a class="contact-link" href="https://www.instagram.com/karinacastrosanchez/" target="_blank" title="Instagram" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1112 17a4.5 4.5 0 010-9zm5.5-3a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z"/></svg>
+        <a class="contact-link" href="https://www.instagram.com/karinacastrosanchez/" target="_blank" title="Instagram"
+          aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1112 17a4.5 4.5 0 010-9zm5.5-3a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z" />
+          </svg>
         </a>
       </div>
 
-      <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="cta-button" onclick="return gtag_report_conversion(this.href)">Agendar Consulta</a>
+      <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+        class="cta-button" onclick="return gtag_report_conversion(this.href)">Agendar Consulta</a>
       <div class="mobile-menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -1464,12 +2068,18 @@
   <section id="inicio" class="hero-video">
     <!-- Hero video: carregamento otimizado com lazy loading -->
     <div class="hero-media" aria-hidden="true">
-      <video id="heroVideo" muted loop playsinline preload="none" poster="assets/images/hero-poster.jpg" data-src="assets/videos/hero-video.mp4">
+      <video id="heroVideo" muted loop playsinline preload="none" poster="assets/images/hero-poster.jpg"
+        data-src="assets/videos/hero-video.mp4">
         <source data-src="assets/videos/hero-video.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
       </video>
       <!-- Toggle botão para pausar/reproduzir o vídeo -->
-      <button class="hero-video-toggle" aria-controls="heroVideo" aria-label="Pausar vídeo" title="Pausar vídeo">⏸</button>
+      <button class="hero-video-toggle" aria-controls="heroVideo" aria-label="Pausar vídeo" title="Pausar vídeo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="6" y="4" width="4" height="16"></rect>
+          <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+      </button>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -1479,7 +2089,8 @@
         <p class="hero-description">Ortodontia & Estética</p>
       </div>
       <div class="hero-cta-float">
-        <a href="https://wa.me/5555996147772?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20[LP]" target="_blank" onclick="return gtag_report_conversion(this.href)">
+        <a href="https://wa.me/5555996147772?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20[LP]"
+          target="_blank" onclick="return gtag_report_conversion(this.href)">
           Agendar Avaliação
         </a>
       </div>
@@ -1487,9 +2098,17 @@
   </section>
 
   <!-- Seção Quem Somos -->
-  <section id="quem-somos" class="quem-somos">
+  <section id="quem-somos" class="quem-somos section-wave">
+    <!-- Onda superior -->
+    <div class="wave-top wave-to-white">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
     <div class="quem-somos-content">
-      <div class="image-carousel dra-karina">
+      <div class="image-carousel dra-karina reveal reveal-left">
         <div class="swiper draKarinaSwiper">
           <div class="swiper-wrapper">
             <!-- Slides serão preenchidos dinamicamente com as imagens em assets/images/dra-karina -->
@@ -1499,127 +2118,140 @@
           <div class="dra-button-prev swiper-button-prev"></div>
         </div>
       </div>
-      <div class="quem-somos-text">
+      <div class="quem-somos-text reveal reveal-right">
         <h2>Clínica de Ortodontia e Estética</h2>
-        <h4>Clínica moderna e especializada em reabilitação oral</h4>
-        <p><strong>Liderada pela Dra. Karina C. Sanchez, somos uma clínica especializada em ortodontia em Santa Maria (RS) com foco em transformação de sorrisos.</strong></p>
-        <p>Combinamos alta tecnologia, como escaneamento intraoral e Invisalign, com uma abordagem humanizada, para devolver o seu sorriso com conforto e segurança.</p>
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="cta-button" onclick="return gtag_report_conversion(this.href)">Quero agendar minha consulta</a>
+        <h4>Clínica moderna e especializada em ortodontia e clínica geral</h4>
+        <p><strong>Liderada pela Dra. Karina C. Sanchez, somos uma clínica especializada em ortodontia em Santa Maria
+            (RS) com foco em transformação de sorrisos.</strong></p>
+        <p>Combinamos alta tecnologia, como escaneamento intraoral e Invisalign, com uma abordagem humanizada, para
+          devolver o seu sorriso com conforto e segurança.</p>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+          class="cta-button" onclick="return gtag_report_conversion(this.href)">Quero agendar minha consulta</a>
       </div>
     </div>
   </section>
 
   <!-- Seção Sobre a Dra. Karina -->
-  <section id="sobre" class="sobre-karina" aria-labelledby="sobre-title">
+  <section id="sobre" class="sobre-karina section-wave" aria-labelledby="sobre-title">
+    <!-- Onda superior -->
+    <div class="wave-top wave-to-white">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          class="shape-fill" opacity=".25"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          class="shape-fill" opacity=".5"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
     <div class="sobre-wrapper">
-      <div class="sobre-photo">
-        <img
-          src="foto%20dra%20karina%20sanchez.jpeg"
-          alt="Foto profissional em consultório"
-          loading="lazy">
+      <div class="sobre-photo reveal reveal-scale">
+        <img src="foto%20dra%20karina%20sanchez.jpeg" alt="Foto profissional em consultório" loading="lazy">
       </div>
-      <div class="sobre-text">
+      <div class="sobre-text reveal reveal-right">
         <h2 id="sobre-title">Sobre a Dra. Karina</h2>
-        <p>Sou Karina de Castro Sanchez, cirurgiã-dentista formada em Odontologia pela UNIFRA (atual UFN) desde 2009 e especialista em Ortodontia desde 2016. Apaixonada pela odontologia, trabalho com dedicação para transformar sorrisos, unindo saúde, estética e bem-estar, sempre buscando oferecer um atendimento humano e personalizado.</p>
+        <p>Sou Karina de Castro Sanchez, cirurgiã-dentista formada em Odontologia pela UNIFRA (atual UFN) desde 2009 e
+          especialista em Ortodontia desde 2016. Apaixonada pela odontologia, trabalho com dedicação para transformar
+          sorrisos, unindo saúde, estética e bem-estar, sempre buscando oferecer um atendimento humano e personalizado.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Seção Produtos/Serviços -->
-  <section id="servicos" class="produtos-servicos">
-    <h2 class="section-title">Tratamentos e Serviços</h2>
+  <section id="servicos" class="produtos-servicos section-wave">
+    <!-- Onda superior -->
+    <div class="wave-top wave-to-light">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <h2 class="section-title reveal">Tratamentos e Serviços</h2>
     <div class="servicos-carousel">
       <div class="swiper servicosSwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="servico-card">
-              <img
-                src="images/servicos/clareamento-consultorio-1200.jpg"
-                srcset="images/servicos/clareamento-consultorio-480.jpg 480w, images/servicos/clareamento-consultorio-800.jpg 800w, images/servicos/clareamento-consultorio-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Clareamento dental no consultório"
+              <img src="images/servicos/clareamento-caseiro-1200.jpg"
+                srcset="images/servicos/clareamento-caseiro-480.jpg 480w, images/servicos/clareamento-caseiro-800.jpg 800w, images/servicos/clareamento-caseiro-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px" alt="Clareamento dental com moldeira e gel clareador"
                 loading="lazy">
               <h3>Clareamento Dental</h3>
               <p>Moldeiras caseiras supervisionadas. Resultados naturais e duradouros.</p>
-              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20clareamento%20dental%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20clareamento%20dental%20[LP]"
+                class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img
-                src="images/servicos/clareamento-caseiro-1200.jpg"
-                srcset="images/servicos/clareamento-caseiro-480.jpg 480w, images/servicos/clareamento-caseiro-800.jpg 800w, images/servicos/clareamento-caseiro-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Clareamento dental caseiro"
-                loading="lazy">
+              <img src="images/servicos/limpeza-prevencao-1200.jpg"
+                srcset="images/servicos/limpeza-prevencao-480.jpg 480w, images/servicos/limpeza-prevencao-800.jpg 800w, images/servicos/limpeza-prevencao-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px" alt="Limpeza e profilaxia dental profissional" loading="lazy">
               <h3>Limpeza Dental</h3>
               <p>Profilaxia profissional com tecnologia. Elimina tártaro e placa.</p>
-              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20limpeza%20dental%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20limpeza%20dental%20[LP]"
+                class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img
-                src="images/servicos/invisalign-1200.jpg"
+              <img src="images/servicos/invisalign-1200.jpg"
                 srcset="images/servicos/invisalign-480.jpg 480w, images/servicos/invisalign-800.jpg 800w, images/servicos/invisalign-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Alinhadores transparentes Invisalign"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Alinhadores transparentes Invisalign" loading="lazy">
               <h3>Invisalign</h3>
               <p>Aparelho estético e discreto. Alinhamento sem comprometer estética.</p>
-              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20Invisalign%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20Invisalign%20[LP]"
+                class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img
-                src="images/servicos/botox-harmonizacao-1200.jpg"
+              <img src="images/servicos/botox-harmonizacao-1200.jpg"
                 srcset="images/servicos/botox-harmonizacao-480.jpg 480w, images/servicos/botox-harmonizacao-800.jpg 800w, images/servicos/botox-harmonizacao-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Botox e harmonização facial"
-                loading="lazy">
+                sizes="(max-width: 768px) 90vw, 600px" alt="Botox e harmonização facial" loading="lazy">
               <h3>Harmonização Orofacial</h3>
               <p>Resultados naturais e equilibrados. Realça sua beleza única.</p>
-              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20harmonização%20orofacial%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20harmonização%20orofacial%20[LP]"
+                class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img
-                src="images/servicos/clinica-geral-1200.jpg"
-                srcset="images/servicos/clinica-geral-480.jpg 480w, images/servicos/clinica-geral-800.jpg 800w, images/servicos/clinica-geral-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Atendimentos de clínica geral"
+              <img src="images/servicos/clareamento-consultorio-1200.jpg"
+                srcset="images/servicos/clareamento-consultorio-480.jpg 480w, images/servicos/clareamento-consultorio-800.jpg 800w, images/servicos/clareamento-consultorio-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px" alt="Avaliação e planejamento de restauração dental"
                 loading="lazy">
               <h3>Restauração</h3>
               <p>Resina composta de alta qualidade. Devolve função e estética.</p>
-              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20restauração%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20restauração%20[LP]"
+                class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img
-                src="images/servicos/limpeza-prevencao-1200.jpg"
-                srcset="images/servicos/limpeza-prevencao-480.jpg 480w, images/servicos/limpeza-prevencao-800.jpg 800w, images/servicos/limpeza-prevencao-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Limpeza dental e prevenção"
-                loading="lazy">
+              <img src="images/servicos/ortodontia-1200.jpg"
+                srcset="images/servicos/ortodontia-480.jpg 480w, images/servicos/ortodontia-800.jpg 800w, images/servicos/ortodontia-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px" alt="Tratamento ortodôntico com aparelho" loading="lazy">
               <h3>Ortodontia</h3>
               <p>Aparelho convencional com tecnologia. Corrige o alinhamento dental.</p>
-              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20ortodontia%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Tenho%20interesse%20em%20ortodontia%20[LP]"
+                class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="servico-card">
-              <img
-                src="images/servicos/ortodontia-1200.jpg"
-                srcset="images/servicos/ortodontia-480.jpg 480w, images/servicos/ortodontia-800.jpg 800w, images/servicos/ortodontia-1200.jpg 1200w"
-                sizes="(max-width: 768px) 90vw, 600px"
-                alt="Tratamentos ortodônticos"
-                loading="lazy">
+              <img src="images/servicos/clinica-geral-1200.jpg"
+                srcset="images/servicos/clinica-geral-480.jpg 480w, images/servicos/clinica-geral-800.jpg 800w, images/servicos/clinica-geral-1200.jpg 1200w"
+                sizes="(max-width: 768px) 90vw, 600px" alt="Consultório odontológico para avaliação" loading="lazy">
               <h3>Avaliação Gratuita</h3>
               <p>Consulta inicial sem compromisso. Conheça suas opções de tratamento.</p>
-              <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20fazer%20uma%20avaliação%20gratuita%20[LP]" class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
+              <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20fazer%20uma%20avaliação%20gratuita%20[LP]"
+                class="servico-btn" target="_blank" onclick="return gtag_report_conversion(this.href)">Agendar</a>
             </div>
           </div>
         </div>
@@ -1631,68 +2263,123 @@
   </section>
 
   <!-- Seção FAQ e Depoimentos -->
-  <section id="faq" class="faq-depoimentos">
+  <section id="faq" class="faq-depoimentos section-wave">
+    <!-- Onda superior -->
+    <div class="wave-top wave-to-dark">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          class="shape-fill" opacity=".25"></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          class="shape-fill" opacity=".5"></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
     <div class="faq-depoimentos-grid">
-      <h2 class="section-title-white">Perguntas Frequentes & Depoimentos</h2>
+      <h2 class="section-title-white reveal">Perguntas Frequentes & Depoimentos</h2>
 
-            <!-- Depoimentos - Cards Estáticos -->
-            <div class="testimonials-grid">
-              <div class="testimonial-card">
-                <div class="testimonial-avatar">E</div>
-                <p class="testimonial-quote">Achei uma baita diferença já! A Dra. Karina é muito atenciosa e o resultado do clareamento superou minhas expectativas.</p>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <div class="testimonial-meta">
-                  <div class="testimonial-author">
-                    <strong>Eduarda Acosta</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonial-card">
-                <div class="testimonial-avatar">M</div>
-                <p class="testimonial-quote">Atendimento excelente, muito profissional. Recomendo para quem busca qualidade e atenção em Santa Maria.</p>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <div class="testimonial-meta">
-                  <div class="testimonial-author">
-                    <strong>Maurício Reis</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonial-card">
-                <div class="testimonial-avatar">M</div>
-                <p class="testimonial-quote">Consultório muito bem localizado, ambiente agradável e atendimento humanizado. Já indiquei para toda a família.</p>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <div class="testimonial-meta">
-                  <div class="testimonial-author">
-                    <strong>Maria F.</strong>
-                  </div>
-                </div>
-              </div>
+      <!-- Depoimentos - Cards Estáticos -->
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-avatar">E</div>
+          <p class="testimonial-quote">Achei uma baita diferença já! A Dra. Karina é muito atenciosa e o resultado do
+            clareamento superou minhas expectativas.</p>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-author">
+              <strong>Eduarda Acosta</strong>
             </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-avatar">M</div>
+          <p class="testimonial-quote">Atendimento excelente, muito profissional. Recomendo para quem busca qualidade e
+            atenção em Santa Maria.</p>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-author">
+              <strong>Maurício Reis</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-avatar">M</div>
+          <p class="testimonial-quote">Consultório muito bem localizado, ambiente agradável e atendimento humanizado. Já
+            indiquei para toda a família.</p>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-author">
+              <strong>Maria F.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Onda inferior -->
+    <div class="wave-bottom wave-to-light">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
   </section>
 
   <!-- Seção Contato -->
-  <section id="contato" class="contato">
-    <h2 class="section-title">Agende sua consulta hoje mesmo</h2>
+  <section id="contato" class="contato section-wave">
+    <h2 class="section-title reveal">Agende sua consulta hoje mesmo</h2>
     <div class="contato-grid">
-      <div class="contato-card">
-        <div class="contato-icon">📱</div>
+      <div class="contato-card reveal reveal-delay-1">
+        <div class="contato-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+        </div>
         <h3>WhatsApp</h3>
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank" onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+          onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
       </div>
-      <div class="contato-card">
-        <div class="contato-icon">📧</div>
+      <div class="contato-card reveal reveal-delay-2">
+        <div class="contato-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </div>
         <h3>E-mail</h3>
         <a href="mailto:karina_c_sanchez@hotmail.com">karina_c_sanchez@hotmail.com</a>
       </div>
-      <div class="contato-card">
-        <div class="contato-icon">📞</div>
+      <div class="contato-card reveal reveal-delay-3">
+        <div class="contato-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+        </div>
         <h3>Telefone</h3>
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank" onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank"
+          onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
       </div>
-      <div class="contato-card">
-        <div class="contato-icon">📸</div>
+      <div class="contato-card reveal reveal-delay-4">
+        <div class="contato-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </div>
         <h3>Instagram</h3>
         <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">@karinacastrosanchez</a>
       </div>
@@ -1709,9 +2396,10 @@
       </div>
       <div class="footer-section">
         <h3>Contatos</h3>
-        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank" onclick="return gtag_report_conversion(this.href)">📞 (55) 99614-7772</a>
-        <a href="mailto:karina_c_sanchez@hotmail.com">📧 karina_c_sanchez@hotmail.com</a>
-        <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">📸 @karinacastrosanchez</a>
+        <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20entrar%20em%20contato" target="_blank"
+          onclick="return gtag_report_conversion(this.href)">(55) 99614-7772</a>
+        <a href="mailto:karina_c_sanchez@hotmail.com">karina_c_sanchez@hotmail.com</a>
+        <a href="https://www.instagram.com/karinacastrosanchez/" target="_blank">@karinacastrosanchez</a>
       </div>
       <div class="footer-section">
         <h3>Localização</h3>
@@ -1719,7 +2407,9 @@
         <p>Centro - Santa Maria/RS</p>
         <p>CEP: 97010-004</p>
         <div class="footer-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.2!2d-53.81095!3d-29.68376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949ca8cc1a1a1a1a%3A0x1234567890abcdef!2sR.%20Ven%C3%A2ncio%20Aires%2C%202050%20-%20Sala%20403%2C%20Centro%2C%20Santa%20Maria%20-%20RS%2C%2097010-004!5e0!3m2!1spt-BR!2sbr!4v1720000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.2!2d-53.81095!3d-29.68376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949ca8cc1a1a1a1a%3A0x1234567890abcdef!2sR.%20Ven%C3%A2ncio%20Aires%2C%202050%20-%20Sala%20403%2C%20Centro%2C%20Santa%20Maria%20-%20RS%2C%2097010-004!5e0!3m2!1spt-BR!2sbr!4v1720000000000"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -1729,9 +2419,15 @@
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float" target="_blank" onclick="return gtag_report_conversion(this.href)" title="Fale conosco via WhatsApp">
-    <span class="whatsapp-float-icon">💬</span>
-    <span>Agendar consulta</span>
+  <a href="https://wa.me/5555996147772?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta" class="whatsapp-float"
+    target="_blank" onclick="return gtag_report_conversion(this.href)" title="Fale conosco via WhatsApp">
+    <span class="whatsapp-float-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </span>
+    <span>Agendar</span>
   </a>
 
   <!-- Swiper JS -->
@@ -1742,7 +2438,7 @@
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
-        if (typeof(url) != 'undefined') {
+        if (typeof (url) != 'undefined') {
           window.location = url;
         }
       };
@@ -1753,5 +2449,76 @@
       return false;
     }
   </script>
+
+  <!-- Scroll Reveal & Header Effects -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ========================================
+      // SCROLL REVEAL - Intersection Observer
+      // ========================================
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // ========================================
+      // HEADER SCROLL EFFECT
+      // ========================================
+      const header = document.querySelector('header');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 80) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+      }, { passive: true });
+
+      // ========================================
+      // SMOOTH SCROLL PARA LINKS INTERNOS
+      // ========================================
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const headerOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+
+            // Fechar menu mobile se estiver aberto
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks && navLinks.classList.contains('active')) {
+              navLinks.classList.remove('active');
+            }
+          }
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>

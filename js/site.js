@@ -130,16 +130,18 @@ function initSite() {
   try {
     new Swiper('.servicosSwiper', {
       loop: true,
-      slidesPerView: 2.5,
-      spaceBetween: 30,
-      autoplay: { delay: 7000, disableOnInteraction: false },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
       pagination: { el: '.swiper-pagination', clickable: true },
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
       breakpoints: {
-        480: { slidesPerView: 1.5, spaceBetween: 15 },
-        768: { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 2.5, spaceBetween: 25 },
-        1400: { slidesPerView: 3, spaceBetween: 30 }
+        480: { slidesPerView: 1, spaceBetween: 20, centeredSlides: true },
+        640: { slidesPerView: 1.5, spaceBetween: 20, centeredSlides: false },
+        768: { slidesPerView: 2, spaceBetween: 25, centeredSlides: false },
+        1024: { slidesPerView: 2.5, spaceBetween: 25, centeredSlides: false },
+        1400: { slidesPerView: 3, spaceBetween: 30, centeredSlides: false }
       }
     });
   } catch(e) { console.error('Erro Swiper Serviços:', e); }
@@ -166,7 +168,7 @@ function initSite() {
           <div class="testimonial-meta">
             <div class="testimonial-author">
               <strong>${t.name}</strong>
-              <div class="stars">${'⭐'.repeat(t.rating)}</div>
+              <div class="stars">${'★ '.repeat(t.rating).trim()}</div>
               <small>${t.date}</small>
             </div>
           </div>
@@ -234,17 +236,19 @@ function initSite() {
 
       window.draSwiper = new Swiper('.draKarinaSwiper', {
         loop: true,
-        autoplay: { delay: 7000, disableOnInteraction: false },
-        slidesPerView: 2.5,
-        slidesPerGroup: 2,
-        spaceBetween: 30,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
         pagination: { el: '.dra-pagination', clickable: true },
         navigation: { nextEl: '.dra-button-next', prevEl: '.dra-button-prev' },
         breakpoints: {
-          480: { slidesPerView: 1.5, slidesPerGroup: 2, spaceBetween: 15 },
-          768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 2.5, slidesPerGroup: 2, spaceBetween: 25 },
-          1400: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 30 }
+          480: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20, centeredSlides: true },
+          640: { slidesPerView: 1.5, slidesPerGroup: 1, spaceBetween: 20, centeredSlides: false },
+          768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 20, centeredSlides: false },
+          1024: { slidesPerView: 2.5, slidesPerGroup: 2, spaceBetween: 25, centeredSlides: false },
+          1400: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 30, centeredSlides: false }
         }
       });
     })
@@ -253,21 +257,24 @@ function initSite() {
   // Controles vídeo hero
   const video = document.getElementById('heroVideo');
   const toggle = document.querySelector('.hero-video-toggle');
-  
+
+  const pauseIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+  const playIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>';
+
   if (video && toggle) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       video.pause();
       video.removeAttribute('autoplay');
-      toggle.textContent = '▶';
+      toggle.innerHTML = playIcon;
     }
-    
+
     toggle.addEventListener('click', () => {
       if (video.paused) {
         video.play();
-        toggle.textContent = '⏸';
+        toggle.innerHTML = pauseIcon;
       } else {
         video.pause();
-        toggle.textContent = '▶';
+        toggle.innerHTML = playIcon;
       }
     });
   }

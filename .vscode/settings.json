@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/site-dentista/index.html"
+    "livePreview.defaultPreviewPath": "/site-dentista/index.html",
+    "liveServer.settings.port": 5501
 }
